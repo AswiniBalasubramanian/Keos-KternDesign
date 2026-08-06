@@ -58,7 +58,7 @@ export function StudioSidebar() {
   return (
     <aside className="flex h-full w-72 flex-col gap-3 overflow-y-auto border-r bg-zinc-950 p-4 text-zinc-100">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium">Menu</span>
+        <span className="text-sm font-medium">Keos design system</span>
         <MenuIcon library={iconLibrary} className="h-4 w-4" />
       </div>
 

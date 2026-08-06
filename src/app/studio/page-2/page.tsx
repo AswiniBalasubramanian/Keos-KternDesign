@@ -11,10 +11,12 @@ import { AccountNavCard } from "@/components/theme-studio/account-nav-card"
 import { PaymentsBreadcrumbCard } from "@/components/theme-studio/payments-breadcrumb-card"
 import { SupportFaqCard } from "@/components/theme-studio/support-faq-card"
 import { FrontDoorCard } from "@/components/theme-studio/front-door-card"
+import { ChatWelcomeCard } from "@/components/theme-studio/chat-welcome-card"
 
 export default function StudioPageTwo() {
   return (
     <div className="min-w-[1800px] columns-4 gap-6 [&>*]:mb-6 [&>*]:break-inside-avoid">
+      <ChatWelcomeCard />
       <DistributeTrackCard />
       <QrConnectCard />
       <DividendIncomeCard />
