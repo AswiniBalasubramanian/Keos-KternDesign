@@ -11,6 +11,7 @@ export const foundationSections: FoundationSection[] = [
   { id: "radius", label: "Radius", description: "Corner rounding tokens, from sharp to fully pill-shaped." },
   { id: "iconography", label: "Iconography", description: "Five interchangeable icon libraries, one consistent API." },
   { id: "elevation", label: "Elevation", description: "Shadow and ring tokens used to express depth and hierarchy." },
+  { id: "illustration", label: "Illustration", description: "A single dithered mark used across empty states and placeholders." },
 ]
 
 export const colorTokens = [
@@ -24,6 +25,14 @@ export const colorTokens = [
   { name: "success", className: "bg-success" },
   { name: "warning", className: "bg-warning" },
   { name: "info", className: "bg-info" },
+]
+
+export const chartTokens = [
+  { name: "chart-1", className: "bg-chart-1" },
+  { name: "chart-2", className: "bg-chart-2" },
+  { name: "chart-3", className: "bg-chart-3" },
+  { name: "chart-4", className: "bg-chart-4" },
+  { name: "chart-5", className: "bg-chart-5" },
 ]
 
 export const spacingTokens = [

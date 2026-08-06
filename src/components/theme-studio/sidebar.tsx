@@ -9,6 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar"
 import {
   baseColors,
   chartColors,
@@ -21,7 +22,6 @@ import {
   isValidHex,
 } from "@/lib/theme-presets"
 import { useThemeStudio } from "@/components/theme-studio/theme-provider"
-import { MenuIcon } from "@/components/theme-studio/icon-picker"
 
 const swatchDot = (color: string) => (
   <span className="h-4 w-4 rounded-full border" style={{ backgroundColor: color }} />
@@ -54,12 +54,18 @@ export function StudioSidebar() {
     setCustomThemeHex,
     setCustomChartHex,
   } = useThemeStudio()
+  const { open } = useSidebar()
 
   return (
-    <aside className="flex h-full w-72 flex-col gap-3 overflow-y-auto border-r bg-zinc-950 p-4 text-zinc-100">
+    <aside
+      className={`h-full shrink-0 overflow-hidden border-r bg-zinc-950 text-zinc-100 transition-[width] duration-200 ease-linear ${
+        open ? "w-72" : "w-0 border-r-0"
+      }`}
+    >
+      <div className="flex h-full w-72 flex-col gap-3 overflow-y-auto p-4">
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium">Keos design system</span>
-        <MenuIcon library={iconLibrary} className="h-4 w-4" />
+        <SidebarTrigger className="text-zinc-100 hover:bg-zinc-800 hover:text-zinc-100" />
       </div>
 
       <FieldSelect
@@ -156,6 +162,7 @@ export function StudioSidebar() {
         icon={<PaintBucket className="h-4 w-4 text-zinc-400" />}
       />
 
+      </div>
     </aside>
   )
 }

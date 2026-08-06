@@ -2,9 +2,11 @@
 
 import { useState } from "react"
 import { SiteNav } from "@/components/site/site-nav"
+import { DitherIllustration } from "@/components/site/dither-illustration"
 import {
   foundationSections,
   colorTokens,
+  chartTokens,
   spacingTokens,
   radiusTokens,
   typeScale,
@@ -48,13 +50,28 @@ export default function FoundationPage() {
           </div>
 
           {section.id === "color" && (
-            <div className="grid grid-cols-3 gap-4 sm:grid-cols-5">
-              {colorTokens.map((c) => (
-                <div key={c.name} className="space-y-1.5">
-                  <div className={`h-16 w-full rounded-md ${c.className}`} />
-                  <p className="text-xs text-muted-foreground">{c.name}</p>
+            <div className="space-y-8">
+              <div className="grid grid-cols-3 gap-4 sm:grid-cols-5">
+                {colorTokens.map((c) => (
+                  <div key={c.name} className="space-y-1.5">
+                    <div className={`h-16 w-full rounded-md ${c.className}`} />
+                    <p className="text-xs text-muted-foreground">{c.name}</p>
+                  </div>
+                ))}
+              </div>
+              <div>
+                <p className="mb-3 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">
+                  Chart Palette
+                </p>
+                <div className="grid grid-cols-3 gap-4 sm:grid-cols-5">
+                  {chartTokens.map((c) => (
+                    <div key={c.name} className="space-y-1.5">
+                      <div className={`h-16 w-full rounded-md ${c.className}`} />
+                      <p className="text-xs text-muted-foreground">{c.name}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           )}
 
@@ -111,6 +128,15 @@ export default function FoundationPage() {
                   <p className="text-xs text-muted-foreground">{e.name}</p>
                 </div>
               ))}
+            </div>
+          )}
+
+          {section.id === "illustration" && (
+            <div className="flex flex-col items-center gap-4 rounded-xl border py-16 text-center">
+              <DitherIllustration />
+              <p className="max-w-xs text-xs text-muted-foreground">
+                Rendered client-side with ordered dithering — no image assets required.
+              </p>
             </div>
           )}
         </main>

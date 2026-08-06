@@ -12,7 +12,7 @@ export function StudioPageNav() {
   const pathname = usePathname()
 
   return (
-    <div className="mb-4 flex gap-2">
+    <div className="sticky top-0 left-0 z-20 mb-4 flex w-fit gap-2 bg-muted/30 py-1 backdrop-blur supports-backdrop-filter:bg-muted/60">
       {pages.map((p) => (
         <Link
           key={p.href}

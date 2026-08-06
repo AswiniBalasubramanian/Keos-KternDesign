@@ -6,7 +6,7 @@ export interface SiteNavLink {
 
 export const siteNavLinks: SiteNavLink[] = [
   { id: "home", label: "Home", href: "/" },
-  { id: "studio", label: "Studio Preview", href: "/studio" },
+  { id: "studio", label: "Studio", href: "/studio" },
   { id: "foundation", label: "Foundation", href: "/foundation" },
   { id: "components", label: "Components", href: "/components" },
   { id: "blocks", label: "Blocks", href: "/blocks" },

@@ -31,6 +31,7 @@ export default function Home() {
     <div className="flex flex-col bg-background text-foreground">
       <SiteNav />
 
+      <div className="mx-auto w-full max-w-6xl border-x">
       <section className="relative border-b px-6 py-24 sm:px-10">
         <span className="absolute right-6 top-6 rounded-full border px-3 py-1 font-mono text-[10px] tracking-widest text-muted-foreground uppercase sm:right-10">
           Live Theming
@@ -41,7 +42,8 @@ export default function Home() {
           every product surface.
         </h1>
         <p className="mt-6 max-w-md text-muted-foreground">
-          The token layer for building consistent, on-brand interfaces — themeable in real time.
+          The visual and experience layer behind every product surface — color, type, motion, and
+          interaction, unified and themeable in real time.
         </p>
         <div className="mt-8">
           <PillButton href="/studio" variant="default">
@@ -111,8 +113,17 @@ export default function Home() {
       </section>
 
       <footer className="border-t px-6 py-8 font-mono text-[11px] tracking-widest text-muted-foreground uppercase sm:px-10">
-        Built with Next.js · Tailwind CSS · shadcn/ui
+        Built with Next.js · Tailwind CSS · shadcn/ui · by{" "}
+        <a
+          href="https://www.linkedin.com/in/iam-aswini"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-foreground hover:underline"
+        >
+          Aswini
+        </a>
       </footer>
+      </div>
     </div>
   )
 }
