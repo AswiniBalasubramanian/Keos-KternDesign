@@ -1,7 +1,9 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SiteNav } from "@/components/site/site-nav"
+import { DotGridBackground } from "@/components/site/dot-grid-background"
 import { landingFeatures, landingStats } from "@/lib/landing-data"
 
 function PillButton({
@@ -32,23 +34,40 @@ export default function Home() {
       <SiteNav />
 
       <div className="mx-auto w-full max-w-6xl border-x">
-      <section className="relative border-b px-6 py-24 sm:px-10">
-        <span className="absolute right-6 top-6 rounded-full border px-3 py-1 font-mono text-[10px] tracking-widest text-muted-foreground uppercase sm:right-10">
-          Live Theming
-        </span>
-        <h1 className="max-w-2xl text-4xl leading-[1.05] font-bold tracking-tight sm:text-6xl">
-          One system,
-          <br />
-          every product surface.
-        </h1>
-        <p className="mt-6 max-w-md text-muted-foreground">
-          The visual and experience layer behind every product surface — color, type, motion, and
-          interaction, unified and themeable in real time.
-        </p>
-        <div className="mt-8">
-          <PillButton href="/studio" variant="default">
-            Explore Design System
-          </PillButton>
+      <section className="relative overflow-hidden border-b px-6 pt-24 pb-10 sm:px-10">
+        <DotGridBackground className="absolute inset-0 z-0" spacing={26} dotSize={1.6} impactRadius={160} />
+        <div className="relative z-10 mx-auto flex max-w-2xl flex-col items-center text-center">
+          <h1
+            className="animate-hero-reveal text-4xl leading-[1.05] font-bold tracking-tight sm:text-6xl"
+            style={{ animationDelay: "0.1s" }}
+          >
+            One system,
+            <br />
+            every product surface.
+          </h1>
+          <p
+            className="animate-hero-reveal mx-auto mt-6 max-w-md text-muted-foreground"
+            style={{ animationDelay: "0.25s" }}
+          >
+            The visual and experience layer behind every product surface — color, type, motion, and
+            interaction, unified and themeable in real time.
+          </p>
+          <div className="animate-hero-reveal mt-8" style={{ animationDelay: "0.4s" }}>
+            <PillButton href="/studio" variant="default">
+              Explore Design System
+            </PillButton>
+          </div>
+        </div>
+        <div className="animate-hero-illustration relative z-0 mx-auto -mt-32 max-w-4xl">
+          <Image
+            src="/hero-image.png"
+            alt=""
+            aria-hidden="true"
+            width={6657}
+            height={800}
+            priority
+            className="pointer-events-none mx-auto w-full dark:invert"
+          />
         </div>
       </section>
 
@@ -59,6 +78,16 @@ export default function Home() {
         <h2 className="mt-3 max-w-xl text-2xl leading-tight font-bold tracking-tight sm:text-4xl">
           Every product ships its own colors, its own spacing, its own drift.
         </h2>
+        <div className="mx-auto mt-10 max-w-3xl">
+          <Image
+            src="/problem-illustration.svg"
+            alt=""
+            aria-hidden="true"
+            width={1748}
+            height={1165}
+            className="pointer-events-none mx-auto w-full max-w-2xl dark:invert"
+          />
+        </div>
       </section>
 
       <section className="grid grid-cols-2 border-b sm:grid-cols-4">

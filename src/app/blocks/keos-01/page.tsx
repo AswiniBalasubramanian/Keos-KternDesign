@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Plus, Folder, Search, Bell, Book, HelpCircle, ChevronRight, Mic } from "lucide-react"
+import { Plus, Folder, Search, Bell, Book, HelpCircle, ChevronRight, Mic, ArrowUp } from "lucide-react"
 import { Lightbulb, Globe, Robot } from "@phosphor-icons/react/dist/ssr"
 import { SiteNav } from "@/components/site/site-nav"
 import { KMark } from "@/components/site/k-mark"
@@ -41,28 +41,38 @@ export default function KeosConversationBlockPage() {
           <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col items-center gap-6 px-6 py-16 text-center">
             <KMark className="h-10 w-10 text-primary" />
             <div className="space-y-1.5">
-              <h1 className="text-2xl font-bold tracking-tight">Welcome to Keos Conversation</h1>
+              <h1 className="text-2xl font-bold tracking-tight">Welcome to KEOS</h1>
               <p className="text-sm text-muted-foreground">
-                Ask anything across your project&apos;s knowledge — or type @ to bring an agent in.
+                Every answer starts with a question — you just need the right one.
               </p>
             </div>
 
-            <div className="flex w-full flex-wrap justify-start gap-2">
-              <Button variant="outline" size="sm" className="gap-1.5">
-                <Folder className="h-3.5 w-3.5" />
-                Scope: Project
-                <ChevronRight className="h-3.5 w-3.5 rotate-90" />
-              </Button>
-              <Button variant="outline" size="sm" className="gap-1.5">
-                Project workspace
-                <ChevronRight className="h-3.5 w-3.5 rotate-90" />
-              </Button>
-            </div>
+            <div className="flex w-full flex-col items-center gap-2">
+              <div className="flex w-full flex-wrap justify-start gap-2">
+                <Button variant="outline" size="sm" className="gap-1.5">
+                  <Folder className="h-3.5 w-3.5" />
+                  Scope: Project
+                  <ChevronRight className="h-3.5 w-3.5 rotate-90" />
+                </Button>
+                <Button variant="outline" size="sm" className="gap-1.5">
+                  Project workspace
+                  <ChevronRight className="h-3.5 w-3.5 rotate-90" />
+                </Button>
+              </div>
 
-            <div className="relative w-full">
-              <Input placeholder="Ask Keos — use @ to mention an agent..." className="h-11 rounded-full pr-12 pl-10" />
-              <Plus className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Mic className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <div className="relative w-full">
+                <Input
+                  placeholder="Ask KEOS — use @ to mention an agent..."
+                  className="h-12 rounded-xl pr-24 pl-10"
+                />
+                <Plus className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <div className="absolute right-2 top-1/2 flex -translate-y-1/2 items-center gap-2">
+                  <Mic className="h-4 w-4 text-muted-foreground" />
+                  <Button size="icon" className="h-8 w-8 rounded-full">
+                    <ArrowUp className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
             </div>
 
             <div className="flex w-full items-center justify-between gap-3 rounded-xl border bg-muted/40 p-4 text-left">
@@ -84,7 +94,12 @@ export default function KeosConversationBlockPage() {
                   </p>
                 </div>
               </div>
-              <Button size="sm">Connect</Button>
+              <div className="flex shrink-0 items-center gap-2">
+                <Button variant="ghost" size="sm">
+                  Dismiss
+                </Button>
+                <Button size="sm">Connect</Button>
+              </div>
             </div>
 
             <div className="w-full space-y-1 text-left">

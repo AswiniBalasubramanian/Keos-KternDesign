@@ -6,6 +6,7 @@ import { Search, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { KMark } from "@/components/site/k-mark"
+import { ThemeToggle } from "@/components/site/theme-toggle"
 import { siteNavLinks } from "@/lib/site-nav-data"
 
 export function SiteNav() {
@@ -36,6 +37,7 @@ export function SiteNav() {
           <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
           <Input placeholder="Search..." className="w-40 rounded-full pl-8" />
         </div>
+        <ThemeToggle />
         <Button
           variant="outline"
           size="icon"
