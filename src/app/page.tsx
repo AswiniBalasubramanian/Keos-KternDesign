@@ -58,7 +58,7 @@ export default function Home() {
             </PillButton>
           </div>
         </div>
-        <div className="animate-hero-illustration relative z-0 mx-auto -mt-32 max-w-4xl">
+        <div className="animate-hero-illustration relative z-0 mx-auto mt-6 max-w-4xl">
           <Image
             src="/hero-image.png"
             alt=""
