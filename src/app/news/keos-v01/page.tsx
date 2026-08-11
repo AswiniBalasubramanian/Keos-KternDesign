@@ -18,59 +18,79 @@ export default function KeosV01Page() {
         {/* ── Hero thumbnail ──────────────────────────────────────────────── */}
         <div
           className="relative flex items-center justify-center overflow-hidden border-b"
-          style={{
-            minHeight: "480px",
-            background: "linear-gradient(135deg, #6B0A1A 0%, #A8200D 18%, #C93415 32%, #E04A10 48%, #F26318 62%, #C0340E 76%, #7A0E1E 100%)",
-          }}
+          style={{ minHeight: "520px", background: "#8B0A14" }}
         >
-          {/* Halftone dot grid overlay */}
-          <div
-            className="pointer-events-none absolute inset-0"
-            style={{
-              backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.18) 1px, transparent 1px)",
-              backgroundSize: "22px 22px",
-              zIndex: 1,
-            }}
-          />
-          {/* Abstract geometric shapes */}
-          <div className="pointer-events-none absolute inset-0 overflow-hidden" style={{ zIndex: 1 }}>
-            <div style={{
-              position: "absolute", top: "-10%", left: "-5%",
-              width: "55%", height: "70%",
-              background: "rgba(120,10,30,0.55)",
-              transform: "rotate(-18deg) skewY(-6deg)",
-              borderRadius: "4px",
-            }} />
-            <div style={{
-              position: "absolute", bottom: "-15%", right: "-8%",
-              width: "50%", height: "65%",
-              background: "rgba(80,5,15,0.5)",
-              transform: "rotate(12deg) skewX(-8deg)",
-              borderRadius: "4px",
-            }} />
-            <div style={{
-              position: "absolute", top: "20%", right: "15%",
-              width: "28%", height: "45%",
-              background: "rgba(200,60,20,0.35)",
-              transform: "rotate(-6deg)",
-              borderRadius: "2px",
-            }} />
-            {/* Star sparkles */}
-            {[
-              { top: "12%", left: "8%", size: 20, opacity: 0.25 },
-              { top: "70%", right: "10%", size: 28, opacity: 0.2 },
-              { bottom: "15%", left: "30%", size: 14, opacity: 0.18 },
-            ].map((s, i) => (
-              <svg key={i} width={s.size} height={s.size} viewBox="0 0 24 24"
-                style={{ position: "absolute", opacity: s.opacity, ...s }}
-              >
-                <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" fill="white" />
-              </svg>
-            ))}
-          </div>
+          {/* Full SVG scene — exact match of the Keos brand image */}
+          <svg
+            className="pointer-events-none absolute inset-0 h-full w-full"
+            viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              {/* Radial gradient — hot orange center */}
+              <radialGradient id="bg" cx="55%" cy="50%" r="65%">
+                <stop offset="0%" stopColor="#F05A00" />
+                <stop offset="40%" stopColor="#C0280C" />
+                <stop offset="100%" stopColor="#5C0010" />
+              </radialGradient>
+              {/* Halftone pattern */}
+              <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+                <circle cx="11" cy="11" r="1" fill="rgba(255,255,255,0.14)" />
+              </pattern>
+            </defs>
+
+            {/* Base gradient fill */}
+            <rect width="1440" height="520" fill="url(#bg)" />
+
+            {/* ── Large overlapping diamond / rhombus shapes ─────────────── */}
+            {/* Top-left dark crimson diamond */}
+            <polygon points="0,0 340,200 200,440 -120,240" fill="#6B0010" opacity="0.9" />
+            {/* Top-left purple bleed */}
+            <polygon points="-60,-20 260,160 80,380 -200,200" fill="#5A0040" opacity="0.5" />
+            {/* Center-left large dark red slab */}
+            <polygon points="120,0 560,0 480,520 80,520" fill="#8C0014" opacity="0.65" />
+            {/* Top center swooping dark shape */}
+            <polygon points="300,-60 760,0 700,300 200,200" fill="#7A0012" opacity="0.7" />
+            {/* Right large orange-red diamond */}
+            <polygon points="800,80 1200,0 1500,260 1100,520" fill="#D03800" opacity="0.6" />
+            {/* Bottom-right deep red diamond */}
+            <polygon points="900,300 1440,200 1440,520 700,520" fill="#6A0010" opacity="0.75" />
+            {/* Center mid-right orange slab */}
+            <polygon points="600,100 1000,60 1060,400 620,420" fill="#E04500" opacity="0.45" />
+            {/* Top-right bright orange triangle */}
+            <polygon points="1100,-20 1440,-20 1440,260 1200,300" fill="#F06000" opacity="0.55" />
+            {/* Small dark accent bottom-center */}
+            <polygon points="400,380 720,300 780,520 360,520" fill="#5A0012" opacity="0.6" />
+
+            {/* Halftone overlay */}
+            <rect width="1440" height="520" fill="url(#dots)" />
+
+            {/* ── Sparkle stars ─────────────────────────────────────────── */}
+            {/* top-left small */}
+            <g transform="translate(110,88)" opacity="0.35">
+              <path d="M0,-14 L2.5,0 L14,0 L2.5,2.5 L0,14 L-2.5,2.5 L-14,0 L-2.5,-2.5 Z" fill="white"/>
+            </g>
+            {/* left-mid */}
+            <g transform="translate(60,290)" opacity="0.22">
+              <path d="M0,-10 L1.8,0 L10,0 L1.8,1.8 L0,10 L-1.8,1.8 L-10,0 L-1.8,-1.8 Z" fill="white"/>
+            </g>
+            {/* right-center-bottom */}
+            <g transform="translate(1300,390)" opacity="0.28">
+              <path d="M0,-18 L3,0 L18,0 L3,3 L0,18 L-3,3 L-18,0 L-3,-3 Z" fill="white"/>
+            </g>
+            {/* top-right */}
+            <g transform="translate(1380,80)" opacity="0.2">
+              <path d="M0,-10 L1.8,0 L10,0 L1.8,1.8 L0,10 L-1.8,1.8 L-10,0 L-1.8,-1.8 Z" fill="white"/>
+            </g>
+            {/* bottom-left */}
+            <g transform="translate(330,460)" opacity="0.18">
+              <path d="M0,-8 L1.4,0 L8,0 L1.4,1.4 L0,8 L-1.4,1.4 L-8,0 L-1.4,-1.4 Z" fill="white"/>
+            </g>
+          </svg>
+
           {/* Centred K mark */}
-          <div className="relative flex flex-col items-center gap-3" style={{ zIndex: 2 }}>
-            <KMark className="h-24 w-24 text-white/90 drop-shadow-2xl" />
+          <div className="relative flex flex-col items-center gap-3" style={{ zIndex: 2, color: "#F5EDE0" }}>
+            <KMark className="h-28 w-28 drop-shadow-2xl" />
           </div>
         </div>
 
@@ -117,64 +137,94 @@ export default function KeosV01Page() {
               style={{ fontFamily: "var(--font-figtree)" }}
             >
               <p>
-                Today marks a significant milestone for the Keos &amp; K-tern product family at Kaartech. We're shipping <strong>Keos v0.1</strong> — the first internal release of our unified design system — to the full Kaartech team.
+                KEOS, the <strong>Kaar Enterprise Operating System</strong>, brings your data, AI models, agents, and controls together in one system — built on your enterprise core. Version 1 is now live for KaarTech people.
+              </p>
+
+              <p className="border-l-2 border-[#FB540C] pl-5 italic text-muted-foreground">
+                "Engineering the intelligence fabric for enterprise transformation."
               </p>
 
               <p>
-                This release isn't about perfection. It's about alignment. For the first time, every product under the Keos and K-tern umbrella shares the same foundation: a single token layer for color, spacing, radius, and typography; a core component library built on Radix primitives; and a live Studio where any designer or engineer can switch themes and see changes reflected instantly.
+                KEOS is a chat-based way of working, built by KaarTech for KaarTech people. You describe what you want in plain language, and KEOS plans, researches, and acts — using the models, skills, and connectors available in your workspace. It's grounded in your organization's own systems and data, operating inside the access and governance rules your organization has set.
               </p>
 
-              <h2
-                className="mt-10 text-2xl font-semibold tracking-tight"
-                style={{ fontFamily: "var(--font-eb-garamond)" }}
-              >
-                What's included in v0.1
+              <div className="rounded-xl border border-[#FB540C]/20 bg-[#FB540C]/5 px-5 py-4 text-sm">
+                <strong>Note:</strong> KEOS is not a general-purpose chatbot. It's KaarTech's operating layer for AI work — deterministic, governed, and built around your systems, not a replacement for them.
+              </div>
+
+              <h2 className="mt-10 text-2xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-eb-garamond)" }}>
+                What you can use KEOS for
               </h2>
 
               <ul className="space-y-3 pl-5">
                 {[
-                  "Foundation tokens — color, spacing, radius, shadow, typography scales for both Keos and K-tern themes",
-                  "26 core UI components — Button, Input, Card, Dialog, Dropdown, Accordion, Tabs, and more",
-                  "Theme Studio — live switcher between Keos and K-tern palettes with dark mode support",
-                  "Charts layer — Recharts-based data visualisation components pre-wired to the token system",
-                  "AI UX patterns — interaction blueprints for streaming responses, tool calls, and agent states",
-                  "Branding Kit — logo marks, color palettes, and type specimens for both brands",
+                  "Writing and editing — emails, docs, specs, scripts",
+                  "Coding help — explaining, debugging, generating snippets",
+                  "Research — summarizing documents, extracting insights across systems",
+                  "Brainstorming and planning — ideas, content strategy, prep work",
+                  "Learning — breaking down complex concepts in plain language",
+                  "Structured deliverables — project charters, stakeholder emails, workflow documentation grounded in your project's skills and connectors",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FB540C]" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FB540C]" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <h2
-                className="mt-10 text-2xl font-semibold tracking-tight"
-                style={{ fontFamily: "var(--font-eb-garamond)" }}
-              >
-                Why now
+              <h2 className="mt-10 text-2xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-eb-garamond)" }}>
+                Getting started
               </h2>
 
               <p>
-                As Kaartech scales its product portfolio, design debt compounds. Every team building their own button, every product shipping its own shade of blue — it adds up. Keos v0.1 is the first step toward eliminating that drift. Every decision made in this system is made once, and used everywhere.
+                Three steps between an invite and your first conversation. An Admin adds you to your team cohort via SSO using your work email — you'll receive an invite. Sign in at <strong>keos.kaartech.com</strong> with your work account or Microsoft SSO. Once in, you land directly in the conversation space: <em>"Think It. Ask It. Done."</em>
               </p>
 
-              <p>
-                This release is internal to Kaartech. We're sharing it with the team to gather real-world feedback before a broader rollout. If something feels off — a token name that doesn't make sense, a component that doesn't flex to your use case — we want to hear it.
-              </p>
+              <h2 className="mt-10 text-2xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-eb-garamond)" }}>
+                Scope: what KEOS remembers
+              </h2>
 
-              <h2
-                className="mt-10 text-2xl font-semibold tracking-tight"
-                style={{ fontFamily: "var(--font-eb-garamond)" }}
-              >
-                What's next
+              <p>Every conversation in KEOS runs within a scope — controlling what KEOS can see and remember while it works with you:</p>
+
+              <ul className="space-y-3 pl-5">
+                {[
+                  "Personal — stays with you. Only you can see the conversation and its knowledge.",
+                  "Project — shared with everyone invited to that project. Teammates can see the conversation and the knowledge behind it.",
+                  "Organization — draws on organization-wide knowledge. Visible only to Admins.",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FB540C]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h2 className="mt-10 text-2xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-eb-garamond)" }}>
+                Projects: your shared AI workspace
               </h2>
 
               <p>
-                v0.2 is already in progress. On deck: Motion system (spring curves + transition presets), Icon library (custom Keos icon set), Pattern blocks (full page-section compositions), and the first public release candidate.
+                A project is a shared workspace with its own Skills, Connectors, Knowledge Base, Memory, and Tools — all scoped to one goal. Create one from the Projects menu, give it a name and description, select the skills and connectors it needs, and your team is ready to work.
+              </p>
+
+              <p>
+                Each project member takes one of three roles: <strong>Project Admin</strong> (full control), <strong>Project Manager</strong> (manages members and settings), or <strong>Project Member</strong> (works inside the project). Only a Project Admin can delete a project.
+              </p>
+
+              <h2 className="mt-10 text-2xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-eb-garamond)" }}>
+                What a real KEOS conversation looks like
+              </h2>
+
+              <p>
+                Inside a project, a single prompt — <em>"Act as a Senior Project Manager. Create a comprehensive project charter for Acme. Include the project objective, key deliverables, core stakeholders, major milestones, key risks and mitigations, and success metrics."</em> — with a reference file attached, produces a fully formatted, print-ready Word document in seconds.
+              </p>
+
+              <p>
+                KEOS reasons about the request, loads the right skills (DOCX generation), reaches into the project's connectors, reads the attached file, generates the charter across all ten required sections, validates it, and hands it back — alongside a clear list of what still needs a human decision. A follow-up prompt then turns the same context into a stakeholder review email, without starting over.
               </p>
 
               <p className="border-l-2 border-[#FB540C] pl-5 italic text-muted-foreground">
-                "Design decisions made once, used everywhere." — This isn't a tagline. It's the constraint that every future Keos decision will be measured against.
+                "Every answer starts with a question — you just need the right one."
               </p>
             </div>
 
@@ -206,7 +256,7 @@ export default function KeosV01Page() {
               <div className="space-y-0 rounded-xl border overflow-hidden">
                 {[
                   { label: "Date", value: "Aug 10, 2026" },
-                  { label: "Version", value: "v0.1.0" },
+                  { label: "Version", value: "v1.0" },
                   { label: "Audience", value: "Kaartech internal" },
                   { label: "Category", value: "Release" },
                   { label: "Status", value: "Live" },
@@ -222,7 +272,7 @@ export default function KeosV01Page() {
               <div>
                 <p className="mb-3 font-mono text-[10px] tracking-widest text-muted-foreground uppercase">On this page</p>
                 <div className="space-y-2">
-                  {["What's included in v0.1", "Why now", "What's next"].map((s) => (
+                  {["What you can use KEOS for", "Getting started", "Scope", "Projects", "What a real conversation looks like"].map((s) => (
                     <p key={s} className="text-sm text-muted-foreground transition hover:text-foreground cursor-pointer"
                       style={{ fontFamily: "var(--font-figtree)" }}>
                       {s}
