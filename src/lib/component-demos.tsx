@@ -242,7 +242,7 @@ export const componentDemos: Record<string, React.ReactNode> = {
   ),
 
   accordion: (
-    <Accordion className="w-full max-w-sm" openMultiple={false}>
+    <Accordion className="w-full max-w-sm">
       {[
         { value: "q1", trigger: "Is it accessible?", content: "Yes. It adheres to WAI-ARIA guidelines." },
         { value: "q2", trigger: "Is it styled?", content: "Yes. It comes with default styles and is fully customisable." },

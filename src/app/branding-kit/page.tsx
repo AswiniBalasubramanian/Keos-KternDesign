@@ -224,7 +224,9 @@ export default function BrandingKitPage() {
               <div className="flex flex-wrap items-end gap-8 rounded-xl border px-8 py-10">
                 {[6, 8, 12, 16, 20].map((size) => (
                   <div key={size} className="flex flex-col items-center gap-2">
-                    <KMark style={{ width: size * 4, height: size * 4 }} className="text-foreground" />
+                    <div style={{ width: size * 4, height: size * 4 }}>
+                      <KMark className="h-full w-full text-foreground" />
+                    </div>
                     <p className="font-mono text-[10px] text-muted-foreground">{size * 4}px</p>
                   </div>
                 ))}
