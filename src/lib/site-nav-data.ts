@@ -16,7 +16,7 @@ export const siteNavLinks: SiteNavLink[] = [
   { id: "studio",    label: "Studio", href: "/studio" },
   {
     id: "foundation",
-    label: "Foundation",
+    label: "Product DS",
     href: "/foundation",
     children: [
       { id: "foundation-home", label: "Foundation",  href: "/foundation" },

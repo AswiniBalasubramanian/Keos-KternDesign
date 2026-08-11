@@ -124,7 +124,7 @@ export default function Home() {
               </div>
               <div className="pt-4">
                 <Link
-                  href="/news"
+                  href="/news/keos-v01"
                   className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2.5 text-xs font-semibold text-background transition hover:opacity-80"
                 >
                   Read announcement

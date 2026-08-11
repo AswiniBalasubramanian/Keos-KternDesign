@@ -12,6 +12,7 @@ import {
   DM_Sans,
   Public_Sans,
   Outfit,
+  EB_Garamond,
 } from "next/font/google";
 import "./globals.css";
 
@@ -26,6 +27,7 @@ const raleway = Raleway({ variable: "--font-raleway", subsets: ["latin"] });
 const dmSans = DM_Sans({ variable: "--font-dm-sans", subsets: ["latin"] });
 const publicSans = Public_Sans({ variable: "--font-public-sans", subsets: ["latin"] });
 const outfit = Outfit({ variable: "--font-outfit", subsets: ["latin"] });
+const ebGaramond = EB_Garamond({ variable: "--font-eb-garamond", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 const fontVariables = [
   geistSans,
@@ -39,6 +41,7 @@ const fontVariables = [
   dmSans,
   publicSans,
   outfit,
+  ebGaramond,
 ]
   .map((f) => f.variable)
   .join(" ");
