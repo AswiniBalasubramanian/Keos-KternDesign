@@ -89,6 +89,10 @@ export function StudioSidebar() {
         onChange={(v) => {
           setTheme(v as typeof theme)
           setCustomThemeHex(null)
+          if (v in chartColors) {
+            setChartColor(v as typeof chartColor)
+            setCustomChartHex(null)
+          }
         }}
         options={Object.keys(baseColors)}
         dot={customThemeHex ?? baseColors[theme].primary}

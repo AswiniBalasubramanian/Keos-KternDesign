@@ -40,13 +40,21 @@ export const baseColors: Record<string, ThemeVars> = {
     card: "oklch(1 0 0)",
     ring: "oklch(0.7 0.12 163)",
   },
+  Orange: {
+    primary: "oklch(0.702 0.226 42.7)",
+    primaryForeground: "oklch(0.985 0 0)",
+    background: "oklch(1 0 0)",
+    foreground: "oklch(0.18 0.02 42)",
+    card: "oklch(1 0 0)",
+    ring: "oklch(0.702 0.226 42.7)",
+  },
 }
 
 export const chartColors: Record<string, string[]> = {
   Neutral: ["oklch(0.55 0 0)", "oklch(0.65 0 0)", "oklch(0.45 0 0)", "oklch(0.75 0 0)", "oklch(0.35 0 0)"],
   Vivid: ["oklch(0.6 0.2 30)", "oklch(0.6 0.2 140)", "oklch(0.6 0.2 250)", "oklch(0.7 0.2 90)", "oklch(0.6 0.2 320)"],
   Ocean: ["oklch(0.55 0.15 220)", "oklch(0.65 0.13 200)", "oklch(0.45 0.12 240)", "oklch(0.7 0.1 190)", "oklch(0.4 0.1 250)"],
-  Orange: ["oklch(0.75 0.16 60)", "oklch(0.68 0.19 45)", "oklch(0.6 0.21 35)", "oklch(0.5 0.18 30)", "oklch(0.4 0.15 25)"],
+  Orange: ["oklch(0.86 0.1 55)", "oklch(0.702 0.226 42.7)", "oklch(0.59 0.21 38)", "oklch(0.48 0.19 32)", "oklch(0.37 0.15 27)"],
 }
 
 export const styles = ["Nova", "Mono", "Classic", "Soft"] as const

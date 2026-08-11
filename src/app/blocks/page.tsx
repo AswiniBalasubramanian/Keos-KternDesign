@@ -8,6 +8,34 @@ import { Button } from "@/components/ui/button"
 import { BlockPreview } from "@/components/site/block-preview"
 import { blockCategories, blockItems } from "@/lib/blocks-data"
 
+export function PatternsContent({ activeId }: { activeId: string }) {
+  const cat = blockCategories.find((c) => c.id === activeId) ?? blockCategories[0]
+  const visible = activeId === "featured" ? blockItems : blockItems.filter((b) => b.category === activeId)
+  return (
+    <div className="space-y-6">
+      <div className="space-y-1">
+        <h2 className="font-heading text-2xl font-semibold tracking-tight">{cat.label} Patterns</h2>
+        <p className="text-sm text-muted-foreground">
+          Ready-to-use {cat.label.toLowerCase()} blocks assembled from the component library.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {visible.map((block) => (
+          <div key={block.id} className="space-y-2">
+            <div className="flex items-center justify-between">
+              <p className="text-sm text-muted-foreground">{block.title}</p>
+              <span className="font-mono text-[11px] text-muted-foreground">{block.slug}</span>
+            </div>
+            <div className="h-48 overflow-hidden rounded-xl border">
+              <BlockPreview variant={block.preview} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function BlocksPage() {
   const [active, setActive] = useState("featured")
   const visible = active === "featured" ? blockItems : blockItems.filter((b) => b.category === active)

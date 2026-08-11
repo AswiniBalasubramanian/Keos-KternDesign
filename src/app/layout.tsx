@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SplashLoader } from "@/components/site/splash-loader";
 import {
   Geist,
   Geist_Mono,
@@ -63,7 +64,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SplashLoader />
+        {children}
+      </body>
     </html>
   );
 }

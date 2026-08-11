@@ -27,6 +27,7 @@ interface DotGridBackgroundProps {
   /** How much dots enlarge at the center of the impact zone. */
   scaleOnHover?: number
   className?: string
+  style?: React.CSSProperties
 }
 
 export function DotGridBackground({
@@ -38,6 +39,7 @@ export function DotGridBackground({
   impactRadius = 140,
   scaleOnHover = 2.2,
   className,
+  style,
 }: DotGridBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
@@ -159,6 +161,7 @@ export function DotGridBackground({
     <canvas
       ref={canvasRef}
       aria-hidden="true"
+      style={style}
       className={`pointer-events-auto text-foreground/70 ${className ?? ""}`}
     />
   )

@@ -6,6 +6,7 @@ import { KMark } from "@/components/site/k-mark"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { KeosRail } from "@/components/site/keos-rail"
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { connectorApps, keosPrompts } from "@/lib/keos-preview-data"
 
 const promptIconComponents = [Lightbulb, Globe, Robot]
@@ -15,12 +16,20 @@ export default function KeosConversationBlockPage() {
     <div className="flex min-h-screen flex-col">
       <SiteNav />
 
-      <div className="flex flex-1">
+      <div className="border-b bg-muted/30 px-6 py-4">
+        <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">Preview</p>
+        <p className="mt-1 text-sm text-foreground">
+          A live preview of the Keos conversation welcome screen.
+        </p>
+      </div>
+
+      <SidebarProvider className="w-full min-h-0 flex-1">
         <KeosRail />
 
-        <div className="flex flex-1 flex-col">
+        <div className="flex min-h-0 flex-1 flex-col">
           <div className="flex h-12 items-center justify-between border-b px-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-1.5">
+              <SidebarTrigger className="-ml-1" />
               <span className="font-mono text-xs tracking-widest uppercase">Keos</span>
               <ChevronRight className="h-3.5 w-3.5" />
               <span className="text-foreground">Chats</span>
@@ -122,7 +131,7 @@ export default function KeosConversationBlockPage() {
             </div>
           </main>
         </div>
-      </div>
+      </SidebarProvider>
 
       <div className="border-t px-6 py-4 text-center">
         <Link href="/blocks" className="text-xs text-muted-foreground hover:text-foreground">

@@ -1,32 +1,10 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
 import { SiteNav } from "@/components/site/site-nav"
 import { DotGridBackground } from "@/components/site/dot-grid-background"
+import { HeroCursorTag } from "@/components/site/hero-cursor-tag"
 import { landingFeatures, landingStats } from "@/lib/landing-data"
-
-function PillButton({
-  children,
-  href,
-  variant = "outline",
-}: {
-  children: React.ReactNode
-  href: string
-  variant?: "outline" | "default"
-}) {
-  return (
-    <Button
-      variant={variant}
-      nativeButton={false}
-      className="gap-1.5 rounded-full border-foreground/15 px-4"
-      render={<Link href={href} />}
-    >
-      {children}
-      <ChevronRight className="h-3.5 w-3.5" />
-    </Button>
-  )
-}
 
 export default function Home() {
   return (
@@ -34,40 +12,69 @@ export default function Home() {
       <SiteNav />
 
       <div className="mx-auto w-full max-w-6xl border-x">
-      <section className="relative overflow-hidden border-b px-6 pt-24 pb-10 sm:px-10">
-        <DotGridBackground className="absolute inset-0 z-0" spacing={26} dotSize={1.6} impactRadius={160} />
-        <div className="relative z-10 mx-auto flex max-w-2xl flex-col items-center text-center">
-          <h1
-            className="animate-hero-reveal text-4xl leading-[1.05] font-bold tracking-tight sm:text-6xl"
-            style={{ animationDelay: "0.1s" }}
-          >
-            One system,
-            <br />
-            every product surface.
+
+      {/* ── Immersive image hero ─────────────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden border-b"
+        style={{
+          minHeight: "min(620px, 80svh)",
+          /* Warm gradient shows as CSS background while image loads */
+          background: "linear-gradient(135deg, #6B0A1A 0%, #C0340E 30%, #E85520 52%, #FF7020 70%, #3A0610 100%)",
+        }}
+      >
+        {/* Actual hero image — sits above CSS bg, below overlays */}
+        <Image
+          src="/landing bg.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          style={{ zIndex: 1 }}
+        />
+        {/* Dark vignette for text legibility — sits above image */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            zIndex: 2,
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.48) 100%)",
+          }}
+        />
+        {/* Dot grid animation — direct child of section so section is the event parent */}
+        <DotGridBackground
+          className="absolute inset-0"
+          style={{ zIndex: 3 }}
+          dotColor="rgba(255,255,255,0.6)"
+          dotSize={1.8}
+          spacing={26}
+          impactRadius={180}
+          scaleOnHover={3.0}
+        />
+        <HeroCursorTag />
+
+        {/* Content */}
+        <div className="relative flex h-full flex-col items-center justify-center px-6 py-32 text-center sm:px-12" style={{ zIndex: 4 }}>
+          <h1 className="animate-hero-reveal max-w-3xl text-4xl font-bold leading-[1.06] tracking-tight text-white sm:text-6xl lg:text-7xl" style={{ animationDelay: "0.08s" }}>
+            Design decisions<br />
+            Made once.<br />
+            <em className="not-italic opacity-80">Used everywhere.</em>
           </h1>
-          <p
-            className="animate-hero-reveal mx-auto mt-6 max-w-md text-muted-foreground"
-            style={{ animationDelay: "0.25s" }}
-          >
-            The visual and experience layer behind every product surface — color, type, motion, and
-            interaction, unified and themeable in real time.
+          <p className="animate-hero-reveal mx-auto mt-6 max-w-2xl text-base text-white/70 sm:text-lg" style={{ animationDelay: "0.22s" }}>
+            The visual and experience layer behind KEOS &amp; KTERN —<br />
+            color, type, motion, and interaction, unified and themeable in real time.
           </p>
-          <div className="animate-hero-reveal mt-8" style={{ animationDelay: "0.4s" }}>
-            <PillButton href="/studio" variant="default">
+          <div className="animate-hero-reveal mt-10 flex items-center gap-4" style={{ animationDelay: "0.36s" }}>
+            <Link
+              href="/studio"
+              className="inline-flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/20 backdrop-blur-sm transition hover:bg-white/20"
+            >
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20">
+                <ArrowRight className="h-3 w-3" />
+              </span>
               Explore Design System
-            </PillButton>
+            </Link>
           </div>
-        </div>
-        <div className="animate-hero-illustration relative z-0 mx-auto mt-6 max-w-4xl">
-          <Image
-            src="/hero-image.png"
-            alt=""
-            aria-hidden="true"
-            width={6657}
-            height={800}
-            priority
-            className="pointer-events-none mx-auto w-full dark:invert"
-          />
         </div>
       </section>
 
@@ -135,9 +142,13 @@ export default function Home() {
           <h2 className="max-w-lg text-2xl font-bold tracking-tight sm:text-4xl">
             Ready to look under the hood?
           </h2>
-          <PillButton href="/studio" variant="default">
+          <Link
+            href="/studio"
+            className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition hover:opacity-80"
+          >
             Explore Design System
-          </PillButton>
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
         </div>
       </section>
 

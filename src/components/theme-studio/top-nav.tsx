@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog"
 import { useThemeStudio } from "@/components/theme-studio/theme-provider"
 
-const navLinks = ["Home", "Docs", "Components", "Blocks", "Charts", "Directory", "Typeset", "Create"]
+const navLinks = ["Home", "Docs", "Components", "Patterns", "Charts", "Directory", "Typeset", "Create"]
 
 export function TopNav() {
   const { cssVariableText } = useThemeStudio()

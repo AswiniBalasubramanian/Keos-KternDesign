@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardAction } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { browserShare } from "@/lib/extra-widgets-data"
@@ -8,6 +9,8 @@ import { useThemeStudio } from "@/components/theme-studio/theme-provider"
 export function BrowserShareCard() {
   const { activeChartColors } = useThemeStudio()
   const total = browserShare.reduce((sum, b) => sum + b.percent, 0)
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { requestAnimationFrame(() => setMounted(true)) }, [])
 
   const stops = browserShare.reduce<{ text: string[]; cursor: number }>(
     (acc, b, i) => {
@@ -35,7 +38,12 @@ export function BrowserShareCard() {
       <CardContent className="flex flex-col items-center gap-6">
         <div
           className="flex h-40 w-40 items-center justify-center rounded-full"
-          style={{ background: `conic-gradient(${stops.join(", ")})` }}
+          style={{
+            background: `conic-gradient(${stops.join(", ")})`,
+            transform: mounted ? "scale(1)" : "scale(0.6)",
+            opacity: mounted ? 1 : 0,
+            transition: "transform 0.5s cubic-bezier(0.34,1.56,0.64,1), opacity 0.4s ease",
+          }}
         >
           <div className="flex h-28 w-28 flex-col items-center justify-center rounded-full bg-card">
             <span className="text-2xl font-bold">{total * 10}</span>
@@ -61,7 +69,11 @@ export function BrowserShareCard() {
           <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
             <div
               className="h-full rounded-full"
-              style={{ width: `${leading.percent}%`, backgroundColor: activeChartColors[0] }}
+              style={{
+                width: mounted ? `${leading.percent}%` : "0%",
+                backgroundColor: activeChartColors[0],
+                transition: "width 0.6s cubic-bezier(0.4,0,0.2,1) 0.3s",
+              }}
             />
           </div>
         </div>
