@@ -78,22 +78,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Latest Releases ─────────────────────────────────────────────── */}
       <section className="border-b px-6 py-16 sm:px-10">
-        <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-          [ Problem ]
-        </p>
-        <h2 className="mt-3 max-w-xl text-2xl leading-tight font-bold tracking-tight sm:text-4xl">
-          Every product ships its own colors, its own spacing, its own drift.
-        </h2>
-        <div className="mx-auto mt-10 max-w-3xl">
-          <Image
-            src="/problem-illustration.svg"
-            alt=""
-            aria-hidden="true"
-            width={1748}
-            height={1165}
-            className="pointer-events-none mx-auto w-full max-w-2xl dark:invert"
-          />
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
+              [ Releases ]
+            </p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
+              Latest releases
+            </h2>
+          </div>
+          <Link
+            href="/news"
+            className="hidden shrink-0 font-mono text-xs tracking-widest text-muted-foreground uppercase underline-offset-4 hover:text-foreground hover:underline sm:block"
+          >
+            View all →
+          </Link>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Release card */}
+          <article className="group flex flex-col justify-between gap-6 rounded-2xl border bg-muted/30 p-6 transition-colors hover:bg-muted/60">
+            <div className="flex flex-col gap-3">
+              {/* Tag */}
+              <span className="inline-flex w-fit items-center rounded-full border px-2.5 py-1 font-mono text-[10px] tracking-widest text-muted-foreground uppercase">
+                Internal
+              </span>
+              <h3 className="text-lg font-bold leading-snug tracking-tight">
+                Keos v0.1 — First internal release
+              </h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                The first internal milestone of the Keos &amp; K-tern Design System, shipped to the Kaartech team. Includes foundation tokens, core components, and the Studio theme switcher.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-0">
+              <div className="flex items-center justify-between border-t py-3">
+                <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">Date</span>
+                <span className="font-mono text-[11px] text-foreground">Aug 10, 2026</span>
+              </div>
+              <div className="flex items-center justify-between border-t py-3">
+                <span className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">Audience</span>
+                <span className="font-mono text-[11px] text-foreground">Kaartech internal</span>
+              </div>
+              <div className="pt-4">
+                <Link
+                  href="/news"
+                  className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2.5 text-xs font-semibold text-background transition hover:opacity-80"
+                >
+                  Read announcement
+                  <ArrowRight className="h-3 w-3" />
+                </Link>
+              </div>
+            </div>
+          </article>
+
+          {/* Placeholder — more coming soon */}
+          <div className="hidden items-center justify-center rounded-2xl border border-dashed sm:flex lg:col-span-2">
+            <p className="font-mono text-xs tracking-widest text-muted-foreground/40 uppercase">
+              More releases coming soon
+            </p>
+          </div>
         </div>
       </section>
 
