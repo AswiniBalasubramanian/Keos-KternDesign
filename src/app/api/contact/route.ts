@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     })
 
     // Convert File to Buffer if present and non-empty
-    const attachments: nodemailer.Attachment[] = []
+    const attachments: nodemailer.SendMailOptions["attachments"] = []
     if (attachmentFile && attachmentFile.size > 0) {
       const buffer = Buffer.from(await attachmentFile.arrayBuffer())
       attachments.push({

@@ -189,7 +189,7 @@ export default function ContactPage() {
               </div>
               <div className="space-y-1.5">
                 <Label>Topic</Label>
-                <Select value={topic} onValueChange={setTopic}>
+                <Select value={topic} onValueChange={(val) => setTopic(val ?? "")}>
                   <SelectTrigger>
                     <SelectValue placeholder="Select a topic" />
                   </SelectTrigger>
