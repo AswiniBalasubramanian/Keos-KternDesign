@@ -68,37 +68,39 @@ const initialPeerCards: PeerCard[] = [
   },
 ]
 
-function ProductCard({ name, role, message, emoji, source, isNew }: ProductCard) {
+function ProductCard({ name, role, message, source, isNew }: ProductCard) {
   return (
-    <div className={`break-inside-avoid rounded-2xl border p-6 transition hover:bg-muted/40 ${isNew ? "bg-orange-500/5 border-orange-300/40" : "bg-muted/20"}`}>
+    <div
+      className="break-inside-avoid rounded-sm p-7 transition-transform hover:-translate-y-0.5"
+      style={{
+        background: "#fdfcf7",
+        boxShadow: "0 2px 8px rgba(0,0,0,0.07), 0 0 0 1px rgba(0,0,0,0.04)",
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")`,
+      }}
+    >
       {isNew && (
         <span className="mb-3 inline-block rounded-full bg-orange-500/10 px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase text-orange-600">Just added ✦</span>
       )}
-      <div className="flex items-start justify-between">
-        <span className="text-3xl">{emoji}</span>
-        {!isNew && (
-          <span className={`rounded-full px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase ${
-            source === "team" ? "bg-orange-500/10 text-orange-600" : "bg-blue-500/10 text-blue-600"
-          }`}>
-            {source === "team" ? "Team" : "External"}
-          </span>
-        )}
-        {isNew && (
-          <span className={`rounded-full px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase ${
-            source === "team" ? "bg-orange-500/10 text-orange-600" : "bg-blue-500/10 text-blue-600"
-          }`}>
-            {source === "team" ? "Team" : "External"}
-          </span>
-        )}
+      <div className="flex items-start justify-between mb-4">
+        <span className={`rounded-full px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase ${
+          source === "team" ? "bg-orange-500/10 text-orange-600" : "bg-blue-500/10 text-blue-600"
+        }`}>
+          {source === "team" ? "Team" : "External"}
+        </span>
       </div>
-      <p className="mt-4 text-sm leading-relaxed">&ldquo;{message}&rdquo;</p>
-      <div className="mt-5 flex items-center gap-3">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-border font-mono text-xs font-bold text-muted-foreground">
+      <p
+        className="text-[15px] leading-relaxed text-[#2a2118]"
+        style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontStyle: "italic" }}
+      >
+        &ldquo;{message}&rdquo;
+      </p>
+      <div className="mt-6 flex items-center gap-3 border-t border-[#e8e0d0] pt-4">
+        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#e8e0d0] font-mono text-xs font-bold text-[#7a6a52]">
           {name[0]}
         </div>
         <div>
-          <p className="text-xs font-semibold">{name}</p>
-          <p className="text-[11px] text-muted-foreground">{role}</p>
+          <p className="text-xs font-semibold text-[#2a2118]">{name}</p>
+          <p className="text-[11px] text-[#9a8a72]">{role}</p>
         </div>
       </div>
     </div>
