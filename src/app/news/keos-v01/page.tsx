@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 import { SiteNav } from "@/components/site/site-nav"
 
 export const metadata = {
-  title: "Keos v0.1 â€” First internal release",
+  title: "Keos v0.1 — First internal release",
   description: "The first internal milestone of the Keos & K-Tern.ai Design System, shipped to the Kaartech team.",
 }
 
@@ -14,7 +14,7 @@ export default function KeosV01Page() {
 
       <div className="mx-auto w-full max-w-6xl border-x">
 
-        {/* â”€â”€ Hero thumbnail â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── Hero thumbnail ──────────────────────────────────────────────── */}
         <div className="relative overflow-hidden border-b" style={{ minHeight: "520px" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -26,7 +26,7 @@ export default function KeosV01Page() {
         </div>
 
 
-        {/* â”€â”€ Article layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── Article layout ──────────────────────────────────────────────── */}
         <div className="grid grid-cols-1 gap-0 lg:grid-cols-[1fr_320px]">
 
           {/* Main content */}
@@ -46,12 +46,12 @@ export default function KeosV01Page() {
               Internal release
             </span>
 
-            {/* Title â€” EB Garamond */}
+            {/* Title — EB Garamond */}
             <h1
               className="mt-4 text-4xl font-semibold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl"
               style={{ fontFamily: "var(--font-eb-garamond)" }}
             >
-              Keos v0.1 â€” First internal release for Kaartech
+              Keos v0.1 — First internal release for Kaartech
             </h1>
 
             {/* Byline */}
@@ -63,13 +63,13 @@ export default function KeosV01Page() {
               </div>
             </div>
 
-            {/* Body â€” Figtree */}
+            {/* Body — Figtree */}
             <div
               className="mt-8 space-y-6 text-[17px] leading-[1.75] text-foreground/85"
               style={{ fontFamily: "var(--font-figtree)" }}
             >
               <p>
-                KEOS, the <strong>Kaar Enterprise Operating System</strong>, brings your data, AI models, agents, and controls together in one system â€” built on your enterprise core. Version 1 is now live for KaarTech people.
+                KEOS, the <strong>Kaar Enterprise Operating System</strong>, brings your data, AI models, agents, and controls together in one system — built on your enterprise core. Version 1 is now live for KaarTech people.
               </p>
 
               <p className="border-l-2 border-[#FB540C] pl-5 italic text-muted-foreground">
@@ -77,11 +77,11 @@ export default function KeosV01Page() {
               </p>
 
               <p>
-                KEOS is a chat-based way of working, built by KaarTech for KaarTech people. You describe what you want in plain language, and KEOS plans, researches, and acts â€” using the models, skills, and connectors available in your workspace. It's grounded in your organization's own systems and data, operating inside the access and governance rules your organization has set.
+                KEOS is a chat-based way of working, built by KaarTech for KaarTech people. You describe what you want in plain language, and KEOS plans, researches, and acts — using the models, skills, and connectors available in your workspace. It's grounded in your organization's own systems and data, operating inside the access and governance rules your organization has set.
               </p>
 
               <div className="rounded-xl border border-[#FB540C]/20 bg-[#FB540C]/5 px-5 py-4 text-sm">
-                <strong>Note:</strong> KEOS is not a general-purpose chatbot. It's KaarTech's operating layer for AI work â€” deterministic, governed, and built around your systems, not a replacement for them.
+                <strong>Note:</strong> KEOS is not a general-purpose chatbot. It's KaarTech's operating layer for AI work — deterministic, governed, and built around your systems, not a replacement for them.
               </div>
 
               <h2 className="mt-10 text-2xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-eb-garamond)" }}>
@@ -90,12 +90,12 @@ export default function KeosV01Page() {
 
               <ul className="space-y-3 pl-5">
                 {[
-                  "Writing and editing â€” emails, docs, specs, scripts",
-                  "Coding help â€” explaining, debugging, generating snippets",
-                  "Research â€” summarizing documents, extracting insights across systems",
-                  "Brainstorming and planning â€” ideas, content strategy, prep work",
-                  "Learning â€” breaking down complex concepts in plain language",
-                  "Structured deliverables â€” project charters, stakeholder emails, workflow documentation grounded in your project's skills and connectors",
+                  "Writing and editing — emails, docs, specs, scripts",
+                  "Coding help — explaining, debugging, generating snippets",
+                  "Research — summarizing documents, extracting insights across systems",
+                  "Brainstorming and planning — ideas, content strategy, prep work",
+                  "Learning — breaking down complex concepts in plain language",
+                  "Structured deliverables — project charters, stakeholder emails, workflow documentation grounded in your project's skills and connectors",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FB540C]" />
@@ -109,20 +109,20 @@ export default function KeosV01Page() {
               </h2>
 
               <p>
-                Three steps between an invite and your first conversation. An Admin adds you to your team cohort via SSO using your work email â€” you'll receive an invite. Sign in at <strong>keos.kaartech.com</strong> with your work account or Microsoft SSO. Once in, you land directly in the conversation space: <em>"Think It. Ask It. Done."</em>
+                Three steps between an invite and your first conversation. An Admin adds you to your team cohort via SSO using your work email — you'll receive an invite. Sign in at <strong>keos.kaartech.com</strong> with your work account or Microsoft SSO. Once in, you land directly in the conversation space: <em>"Think It. Ask It. Done."</em>
               </p>
 
               <h2 className="mt-10 text-2xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-eb-garamond)" }}>
                 Scope: what KEOS remembers
               </h2>
 
-              <p>Every conversation in KEOS runs within a scope â€” controlling what KEOS can see and remember while it works with you:</p>
+              <p>Every conversation in KEOS runs within a scope — controlling what KEOS can see and remember while it works with you:</p>
 
               <ul className="space-y-3 pl-5">
                 {[
-                  "Personal â€” stays with you. Only you can see the conversation and its knowledge.",
-                  "Project â€” shared with everyone invited to that project. Teammates can see the conversation and the knowledge behind it.",
-                  "Organization â€” draws on organization-wide knowledge. Visible only to Admins.",
+                  "Personal — stays with you. Only you can see the conversation and its knowledge.",
+                  "Project — shared with everyone invited to that project. Teammates can see the conversation and the knowledge behind it.",
+                  "Organization — draws on organization-wide knowledge. Visible only to Admins.",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FB540C]" />
@@ -136,7 +136,7 @@ export default function KeosV01Page() {
               </h2>
 
               <p>
-                A project is a shared workspace with its own Skills, Connectors, Knowledge Base, Memory, and Tools â€” all scoped to one goal. Create one from the Projects menu, give it a name and description, select the skills and connectors it needs, and your team is ready to work.
+                A project is a shared workspace with its own Skills, Connectors, Knowledge Base, Memory, and Tools — all scoped to one goal. Create one from the Projects menu, give it a name and description, select the skills and connectors it needs, and your team is ready to work.
               </p>
 
               <p>
@@ -148,19 +148,19 @@ export default function KeosV01Page() {
               </h2>
 
               <p>
-                Inside a project, a single prompt â€” <em>"Act as a Senior Project Manager. Create a comprehensive project charter for Acme. Include the project objective, key deliverables, core stakeholders, major milestones, key risks and mitigations, and success metrics."</em> â€” with a reference file attached, produces a fully formatted, print-ready Word document in seconds.
+                Inside a project, a single prompt — <em>"Act as a Senior Project Manager. Create a comprehensive project charter for Acme. Include the project objective, key deliverables, core stakeholders, major milestones, key risks and mitigations, and success metrics."</em> — with a reference file attached, produces a fully formatted, print-ready Word document in seconds.
               </p>
 
               <p>
-                KEOS reasons about the request, loads the right skills (DOCX generation), reaches into the project's connectors, reads the attached file, generates the charter across all ten required sections, validates it, and hands it back â€” alongside a clear list of what still needs a human decision. A follow-up prompt then turns the same context into a stakeholder review email, without starting over.
+                KEOS reasons about the request, loads the right skills (DOCX generation), reaches into the project's connectors, reads the attached file, generates the charter across all ten required sections, validates it, and hands it back — alongside a clear list of what still needs a human decision. A follow-up prompt then turns the same context into a stakeholder review email, without starting over.
               </p>
 
               <p className="border-l-2 border-[#FB540C] pl-5 italic text-muted-foreground">
-                "Every answer starts with a question â€” you just need the right one."
+                "Every answer starts with a question — you just need the right one."
               </p>
             </div>
 
-            {/* â”€â”€ Full document block â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+            {/* ── Full document block ─────────────────────────────────── */}
             <div className="mt-14 rounded-2xl border overflow-hidden">
               {/* Cover image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -174,7 +174,7 @@ export default function KeosV01Page() {
               <div className="flex items-center justify-between gap-4 border-t bg-muted/30 px-5 py-4">
                 <div>
                   <p className="text-sm font-semibold" style={{ fontFamily: "var(--font-figtree)" }}>
-                    KEOS v1 â€” Knowledge Base
+                    KEOS v1 — Knowledge Base
                   </p>
                   <p className="mt-0.5 font-mono text-[10px] tracking-widest text-muted-foreground uppercase">
                     Full document Â· PDF
@@ -266,7 +266,7 @@ export default function KeosV01Page() {
 
         </div>
 
-        {/* â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* ── Footer ─────────────────────────────────────────────────────── */}
         <footer className="border-t px-6 py-8 font-mono text-[11px] tracking-widest text-muted-foreground uppercase sm:px-10">
           Keos &amp; K-Tern.ai Design System Â· Kaartech Â© 2026 Â·{" "}
           <Link href="/news" className="text-foreground hover:underline">All releases</Link>

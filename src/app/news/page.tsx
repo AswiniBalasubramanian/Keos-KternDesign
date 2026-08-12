@@ -10,7 +10,7 @@ const releases = [
     href: "/news/keos-v01",
     tag: "Internal release",
     tagColor: "bg-[#FB540C]/10 text-[#FB540C]",
-    title: "Keos v0.1 â€” First internal release for Kaartech",
+    title: "Keos v0.1 — First internal release for Kaartech",
     summary:
       "The first internal milestone of the Keos & K-Tern.ai Design System, shipped to the Kaartech team. Includes foundation tokens, core components, and the Studio theme switcher.",
     date: "Aug 10, 2026",

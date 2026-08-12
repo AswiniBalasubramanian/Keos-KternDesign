@@ -15,7 +15,7 @@ export function SplashLoader() {
   useEffect(() => {
     if (sessionStorage.getItem("splash-done")) { setPhase("done"); return }
 
-    // Counter 0 â†’ 100 in ~1.6 s with variable speed
+    // Counter 0 → 100 in ~1.6 s with variable speed
     const tick = () => {
       countRef.current += Math.ceil(Math.random() * 4 + 1)
       if (countRef.current >= 100) {
@@ -58,7 +58,7 @@ export function SplashLoader() {
         pointerEvents: "none",
       }}
     >
-      {/* â”€â”€ Subtle noise grain â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── Subtle noise grain ───────────────────────────────────────── */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -69,7 +69,7 @@ export function SplashLoader() {
         }}
       />
 
-      {/* â”€â”€ Thin horizontal accent line â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── Thin horizontal accent line ───────────────────────────────── */}
       <div
         className="absolute"
         style={{
@@ -84,7 +84,7 @@ export function SplashLoader() {
         }}
       />
 
-      {/* â”€â”€ Center content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── Center content ────────────────────────────────────────────── */}
       <div
         className="absolute inset-0 flex flex-col items-center justify-center"
         style={{ zIndex: 2 }}
@@ -121,7 +121,7 @@ export function SplashLoader() {
           </div>
         </div>
 
-        {/* Wordmark â€” clip-path reveal */}
+        {/* Wordmark — clip-path reveal */}
         <div style={{ marginTop: "1.5rem", overflow: "hidden" }}>
           <div style={{
             transform:  visible ? "translateY(0)" : "translateY(110%)",
@@ -140,7 +140,7 @@ export function SplashLoader() {
           </div>
         </div>
 
-        {/* Tagline â€” delayed reveal */}
+        {/* Tagline — delayed reveal */}
         <div style={{ marginTop: "6px", overflow: "hidden" }}>
           <div style={{
             transform:  visible ? "translateY(0)" : "translateY(110%)",
@@ -160,7 +160,7 @@ export function SplashLoader() {
         </div>
       </div>
 
-      {/* â”€â”€ Counter â€” bottom-right â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── Counter — bottom-right ────────────────────────────────────── */}
       <div
         className="absolute bottom-8 right-10"
         style={{ zIndex: 2 }}
@@ -179,7 +179,7 @@ export function SplashLoader() {
         </p>
       </div>
 
-      {/* â”€â”€ Year label â€” bottom-left â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── Year label — bottom-left ──────────────────────────────────── */}
       <div
         className="absolute bottom-8 left-10"
         style={{ zIndex: 2 }}
@@ -197,7 +197,7 @@ export function SplashLoader() {
         </p>
       </div>
 
-      {/* â”€â”€ Top-left brand mark â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── Top-left brand mark ───────────────────────────────────────── */}
       <div
         className="absolute top-7 left-10 flex items-center gap-2"
         style={{ zIndex: 2 }}

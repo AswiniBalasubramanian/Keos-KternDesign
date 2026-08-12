@@ -54,7 +54,7 @@ export default function TeamPage() {
             />
           </div>
           <p className="mt-4 text-center font-mono text-xs tracking-widest text-muted-foreground/60 uppercase">
-            The KEOS &amp; K-Tern.ai team â€” Kaartech, 2026
+            The KEOS &amp; K-Tern.ai team — Kaartech, 2026
           </p>
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function TeamPage() {
               },
               {
                 title: "Ship with craft",
-                body: "We care about the details â€” motion, contrast, spacing, and accessibility â€” because the details add up to the experience.",
+                body: "We care about the details — motion, contrast, spacing, and accessibility — because the details add up to the experience.",
               },
             ].map((v) => (
               <div key={v.title} className="bg-background px-6 py-8">
