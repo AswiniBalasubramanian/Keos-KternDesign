@@ -25,7 +25,7 @@ const typeSpecimens = [
   { name: "Heading 2", size: "text-xl",  weight: "font-semibold", sample: "Component Library" },
   { name: "Body",      size: "text-sm",  weight: "font-normal",   sample: "The visual and experience layer behind KEOS & KTERN." },
   { name: "Caption",   size: "text-xs",  weight: "font-normal",   sample: "Made once. Used everywhere. Unified and themeable." },
-  { name: "Mono",      size: "text-xs",  weight: "font-normal",   sample: "COLOR Â· TYPOGRAPHY Â· MOTION Â· SPACING",  mono: true },
+  { name: "Mono",      size: "text-xs",  weight: "font-normal",   sample: "COLOR · TYPOGRAPHY · MOTION · SPACING",  mono: true },
 ]
 
 // â”€â”€ Logo usage rules â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -125,10 +125,10 @@ export default function BrandingKitPage() {
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { bg: "bg-background", border: true,  label: "KMark Â· Light",  mark: <KMark className="h-12 w-12 text-foreground" /> },
-                { bg: "bg-foreground", border: false,  label: "KMark Â· Dark",   mark: <KMark className="h-12 w-12 text-background" /> },
-                { bg: "bg-background", border: true,  label: "K-Tern Â· Light", mark: <KternMark className="h-12 w-12 text-foreground" /> },
-                { bg: "bg-foreground", border: false,  label: "K-Tern Â· Dark",  mark: <KternMark className="h-12 w-12 text-background" /> },
+                { bg: "bg-background", border: true,  label: "KMark · Light",  mark: <KMark className="h-12 w-12 text-foreground" /> },
+                { bg: "bg-foreground", border: false,  label: "KMark · Dark",   mark: <KMark className="h-12 w-12 text-background" /> },
+                { bg: "bg-background", border: true,  label: "K-Tern · Light", mark: <KternMark className="h-12 w-12 text-foreground" /> },
+                { bg: "bg-foreground", border: false,  label: "K-Tern · Dark",  mark: <KternMark className="h-12 w-12 text-background" /> },
               ].map((v, i) => (
                 <div key={i} className={`overflow-hidden rounded-xl ${v.border ? "border" : ""}`}>
                   <div className={`flex h-36 items-center justify-center ${v.bg}`}>
@@ -176,7 +176,7 @@ export default function BrandingKitPage() {
           <div className="space-y-10">
             <div>
               <h2 className="text-lg font-semibold tracking-tight">Type Scale</h2>
-              <p className="mt-1 text-sm text-muted-foreground">DM Sans for UI text Â· DM Mono for labels and code.</p>
+              <p className="mt-1 text-sm text-muted-foreground">DM Sans for UI text · DM Mono for labels and code.</p>
             </div>
             <div className="divide-y rounded-xl border overflow-hidden">
               {typeSpecimens.map((t) => (

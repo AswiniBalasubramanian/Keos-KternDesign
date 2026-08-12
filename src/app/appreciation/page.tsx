@@ -6,7 +6,26 @@ import emailjs from "@emailjs/browser"
 
 type Tab = "product" | "peer"
 
-const productCards = [
+type ProductCard = {
+  name: string
+  role: string
+  message: string
+  emoji: string
+  source: string
+  isNew?: boolean
+}
+
+type PeerCard = {
+  from: string
+  fromRole: string
+  to: string
+  toRole: string
+  message: string
+  emoji: string
+  isNew?: boolean
+}
+
+const initialProductCards: ProductCard[] = [
   {
     name: "Edson",
     role: "Head of K-Tern",
@@ -30,7 +49,7 @@ const productCards = [
   },
 ]
 
-const peerCards = [
+const initialPeerCards: PeerCard[] = [
   {
     from: "Edson",
     fromRole: "Head of K-Tern",
@@ -49,16 +68,28 @@ const peerCards = [
   },
 ]
 
-function ProductCard({ name, role, message, emoji, source }: typeof productCards[0]) {
+function ProductCard({ name, role, message, emoji, source, isNew }: ProductCard) {
   return (
-    <div className="break-inside-avoid rounded-2xl border bg-muted/20 p-6 transition hover:bg-muted/40">
+    <div className={`break-inside-avoid rounded-2xl border p-6 transition hover:bg-muted/40 ${isNew ? "bg-orange-500/5 border-orange-300/40" : "bg-muted/20"}`}>
+      {isNew && (
+        <span className="mb-3 inline-block rounded-full bg-orange-500/10 px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase text-orange-600">Just added ✦</span>
+      )}
       <div className="flex items-start justify-between">
         <span className="text-3xl">{emoji}</span>
-        <span className={`rounded-full px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase ${
-          source === "team" ? "bg-orange-500/10 text-orange-600" : "bg-blue-500/10 text-blue-600"
-        }`}>
-          {source === "team" ? "Team" : "External"}
-        </span>
+        {!isNew && (
+          <span className={`rounded-full px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase ${
+            source === "team" ? "bg-orange-500/10 text-orange-600" : "bg-blue-500/10 text-blue-600"
+          }`}>
+            {source === "team" ? "Team" : "External"}
+          </span>
+        )}
+        {isNew && (
+          <span className={`rounded-full px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase ${
+            source === "team" ? "bg-orange-500/10 text-orange-600" : "bg-blue-500/10 text-blue-600"
+          }`}>
+            {source === "team" ? "Team" : "External"}
+          </span>
+        )}
       </div>
       <p className="mt-4 text-sm leading-relaxed">&ldquo;{message}&rdquo;</p>
       <div className="mt-5 flex items-center gap-3">
@@ -74,11 +105,13 @@ function ProductCard({ name, role, message, emoji, source }: typeof productCards
   )
 }
 
-function PeerCard({ from, fromRole, to, toRole, message, emoji }: typeof peerCards[0]) {
+function PeerCard({ from, fromRole, to, toRole, message, emoji, isNew }: PeerCard) {
   return (
-    <div className="break-inside-avoid rounded-2xl border bg-muted/20 p-6 transition hover:bg-muted/40">
+    <div className={`break-inside-avoid rounded-2xl border p-6 transition hover:bg-muted/40 ${isNew ? "bg-orange-500/5 border-orange-300/40" : "bg-muted/20"}`}>
+      {isNew && (
+        <span className="mb-3 inline-block rounded-full bg-orange-500/10 px-2 py-0.5 font-mono text-[9px] tracking-widest uppercase text-orange-600">Just added ✦</span>
+      )}
       <span className="text-3xl">{emoji}</span>
-      {/* From → To */}
       <div className="mt-4 flex items-center gap-2 text-xs">
         <div className="flex items-center gap-1.5">
           <div className="flex h-6 w-6 items-center justify-center rounded-full bg-border font-mono text-[10px] font-bold text-muted-foreground">
@@ -102,7 +135,15 @@ function PeerCard({ from, fromRole, to, toRole, message, emoji }: typeof peerCar
   )
 }
 
-function SubmitForm({ type }: { type: Tab }) {
+function SubmitForm({
+  type,
+  onProductAdded,
+  onPeerAdded,
+}: {
+  type: Tab
+  onProductAdded: (card: ProductCard) => void
+  onPeerAdded: (card: PeerCard) => void
+}) {
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -112,18 +153,27 @@ function SubmitForm({ type }: { type: Tab }) {
     setLoading(true)
     setError(null)
     const fd = new FormData(e.currentTarget)
+    const name = fd.get("name") as string
+    const message = fd.get("message") as string
+    const to = fd.get("to") as string
+
     const params: Record<string, string> = {
-      firstName: fd.get("name") as string,
+      firstName: name,
       lastName: "",
-      email: fd.get("email") as string,
-      reply_to: fd.get("email") as string,
+      email: "noreply@keos.design",
+      reply_to: "noreply@keos.design",
       topic: type === "product" ? "Product Feedback" : "Peer Appreciation",
-      message: type === "peer"
-        ? `To: ${fd.get("to") as string}\n\n${fd.get("message") as string}`
-        : fd.get("message") as string,
+      message: type === "peer" ? `To: ${to}\n\n${message}` : message,
     }
     try {
       await emailjs.send("service_6kfp61k", "template_9dnt128", params, "sLIeQuNU2As7OPJX2")
+
+      if (type === "product") {
+        onProductAdded({ name, role: "Community", message, emoji: "💬", source: "external", isNew: true })
+      } else {
+        onPeerAdded({ from: name, fromRole: "Community", to, toRole: "Team Member", message, emoji: "🫶", isNew: true })
+      }
+
       setSent(true)
       ;(e.target as HTMLFormElement).reset()
     } catch {
@@ -137,8 +187,8 @@ function SubmitForm({ type }: { type: Tab }) {
     return (
       <div className="rounded-2xl border bg-muted/20 px-8 py-10 text-center">
         <p className="text-3xl">💌</p>
-        <p className="mt-3 font-semibold">Received! Thank you.</p>
-        <p className="mt-1 text-sm text-muted-foreground">We'll add it to the wall soon.</p>
+        <p className="mt-3 font-semibold">Added to the wall!</p>
+        <p className="mt-1 text-sm text-muted-foreground">Your appreciation is now live above.</p>
         <button onClick={() => setSent(false)} className="mt-4 font-mono text-xs text-muted-foreground underline-offset-2 hover:underline">
           Submit another
         </button>
@@ -152,15 +202,9 @@ function SubmitForm({ type }: { type: Tab }) {
         {type === "product" ? "Share your feedback" : "Appreciate a teammate"}
       </p>
 
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-        <div className="space-y-1">
-          <label className="text-xs font-medium">Your name</label>
-          <input name="name" required placeholder="Alice" className="w-full rounded-lg border bg-background px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-foreground/20" />
-        </div>
-        <div className="space-y-1">
-          <label className="text-xs font-medium">Your email</label>
-          <input name="email" type="email" required placeholder="alice@example.com" className="w-full rounded-lg border bg-background px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-foreground/20" />
-        </div>
+      <div className="space-y-1">
+        <label className="text-xs font-medium">Your name</label>
+        <input name="name" required placeholder="Alice" className="w-full rounded-lg border bg-background px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-foreground/20" />
       </div>
 
       {type === "peer" && (
@@ -184,7 +228,7 @@ function SubmitForm({ type }: { type: Tab }) {
         disabled={loading}
         className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-xs font-semibold text-background transition hover:opacity-80 disabled:opacity-50"
       >
-        {loading ? "Sending…" : type === "product" ? "Share feedback ✦" : "Send appreciation ♥"}
+        {loading ? "Sending…" : type === "product" ? "Share feedback ✦" : "Send appreciation"}
       </button>
     </form>
   )
@@ -192,6 +236,16 @@ function SubmitForm({ type }: { type: Tab }) {
 
 export default function AppreciationPage() {
   const [tab, setTab] = useState<Tab>("product")
+  const [productCards, setProductCards] = useState<ProductCard[]>(initialProductCards)
+  const [peerCards, setPeerCards] = useState<PeerCard[]>(initialPeerCards)
+
+  function addProductCard(card: ProductCard) {
+    setProductCards((prev) => [card, ...prev])
+  }
+
+  function addPeerCard(card: PeerCard) {
+    setPeerCards((prev) => [card, ...prev])
+  }
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
@@ -227,39 +281,53 @@ export default function AppreciationPage() {
         </div>
       </section>
 
-      {/* Content */}
-      <section className="px-6 py-16 sm:px-10">
-        <div className="mx-auto max-w-5xl">
-          {tab === "product" ? (
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
-              {/* Cards */}
-              <div className="lg:col-span-2 columns-1 gap-5 space-y-5 sm:columns-2">
-                {productCards.map((item, i) => <ProductCard key={i} {...item} />)}
+      {/* Content — painted sides + white center card */}
+      <section className="relative overflow-hidden border-t" style={{ minHeight: "600px" }}>
+        {/* Split painted background */}
+        <div className="absolute inset-0 flex pointer-events-none" aria-hidden="true">
+          <div className="w-[28%] overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/team.jpg" alt="" className="h-full w-full object-cover object-left"
+              style={{ filter: "saturate(2) contrast(1.2) brightness(0.7)" }} />
+          </div>
+          <div className="flex-1 bg-background" />
+          <div className="w-[28%] overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/team.jpg" alt="" className="h-full w-full object-cover object-right"
+              style={{ filter: "saturate(2) contrast(1.2) brightness(0.7)" }} />
+          </div>
+        </div>
+
+        {/* White center card */}
+        <div className="relative z-10 flex justify-center px-4 py-14">
+          <div className="w-full max-w-3xl bg-white shadow-2xl rounded-sm px-8 py-10 sm:px-12 sm:py-14">
+            {tab === "product" ? (
+              <div className="space-y-8">
+                <div className="columns-1 gap-5 space-y-5 sm:columns-2">
+                  {productCards.map((item, i) => <ProductCard key={i} {...item} />)}
+                </div>
+                <div className="border-t pt-8">
+                  <SubmitForm type="product" onProductAdded={addProductCard} onPeerAdded={addPeerCard} />
+                </div>
               </div>
-              {/* Form */}
-              <div>
-                <SubmitForm type="product" />
+            ) : (
+              <div className="space-y-8">
+                <div className="columns-1 gap-5 space-y-5 sm:columns-2">
+                  {peerCards.map((item, i) => <PeerCard key={i} {...item} />)}
+                  {peerCards.length === 0 && (
+                    <div className="rounded-2xl border border-dashed px-8 py-12 text-center">
+                      <p className="text-2xl">🫶</p>
+                      <p className="mt-3 font-mono text-xs tracking-widest text-muted-foreground/50 uppercase">Be the first</p>
+                      <p className="mt-1 text-sm text-muted-foreground">Recognise a teammate&apos;s great work.</p>
+                    </div>
+                  )}
+                </div>
+                <div className="border-t pt-8">
+                  <SubmitForm type="peer" onProductAdded={addProductCard} onPeerAdded={addPeerCard} />
+                </div>
               </div>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
-              {/* Cards */}
-              <div className="lg:col-span-2 columns-1 gap-5 space-y-5 sm:columns-2">
-                {peerCards.map((item, i) => <PeerCard key={i} {...item} />)}
-                {peerCards.length === 0 && (
-                  <div className="rounded-2xl border border-dashed px-8 py-12 text-center col-span-2">
-                    <p className="text-2xl">🫶</p>
-                    <p className="mt-3 font-mono text-xs tracking-widest text-muted-foreground/50 uppercase">Be the first</p>
-                    <p className="mt-1 text-sm text-muted-foreground">Recognise a teammate's great work.</p>
-                  </div>
-                )}
-              </div>
-              {/* Form */}
-              <div>
-                <SubmitForm type="peer" />
-              </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </section>
 

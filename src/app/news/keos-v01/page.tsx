@@ -59,7 +59,7 @@ export default function KeosV01Page() {
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#FB540C] text-[11px] font-bold text-white">A</div>
               <div>
                 <p className="text-sm font-medium" style={{ fontFamily: "var(--font-figtree)" }}>Aswini Balasubramanian</p>
-                <p className="font-mono text-[10px] tracking-widest text-muted-foreground">Aug 10, 2026 Â· 3 min read</p>
+                <p className="font-mono text-[10px] tracking-widest text-muted-foreground">Aug 10, 2026 · 3 min read</p>
               </div>
             </div>
 
@@ -177,7 +177,7 @@ export default function KeosV01Page() {
                     KEOS v1 — Knowledge Base
                   </p>
                   <p className="mt-0.5 font-mono text-[10px] tracking-widest text-muted-foreground uppercase">
-                    Full document Â· PDF
+                    Full document · PDF
                   </p>
                 </div>
                 <a
@@ -268,7 +268,7 @@ export default function KeosV01Page() {
 
         {/* ── Footer ─────────────────────────────────────────────────────── */}
         <footer className="border-t px-6 py-8 font-mono text-[11px] tracking-widest text-muted-foreground uppercase sm:px-10">
-          Keos &amp; K-Tern Design System Â· Kaartech Â© 2026 Â·{" "}
+          Keos &amp; K-Tern Design System · Kaartech © 2026 ·{" "}
           <Link href="/news" className="text-foreground hover:underline">All releases</Link>
         </footer>
 

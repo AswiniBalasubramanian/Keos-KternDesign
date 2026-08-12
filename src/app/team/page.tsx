@@ -154,7 +154,7 @@ export default function TeamPage() {
         >
           Aswini
         </a>
-        {" "}Â· KEOS &amp; K-Tern
+        {" "}· KEOS &amp; K-Tern
       </footer>
     </div>
   )

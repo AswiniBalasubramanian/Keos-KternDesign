@@ -356,6 +356,60 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Letter from the designer ──────────────────────────────────────── */}
+      <section className="relative border-t overflow-hidden" style={{ minHeight: "520px" }}>
+        {/* Split painted background using team photo */}
+        <div className="absolute inset-0 flex pointer-events-none" aria-hidden="true">
+          <div className="w-[32%] overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/team.jpg" alt="" className="h-full w-full object-cover object-left" style={{ filter: "saturate(1.7) contrast(1.1) brightness(0.75)" }} />
+          </div>
+          <div className="flex-1 bg-background" />
+          <div className="w-[32%] overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/team.jpg" alt="" className="h-full w-full object-cover object-right" style={{ filter: "saturate(1.7) contrast(1.1) brightness(0.75)" }} />
+          </div>
+        </div>
+
+        {/* Letter card */}
+        <div className="relative z-10 flex justify-center px-6 py-16 sm:px-10">
+          <div className="w-full max-w-lg rounded-sm bg-white px-10 py-14 shadow-2xl" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>
+            <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#1a1a2e]">
+              A letter from<br />the designer
+            </h2>
+
+            <p className="mt-5 text-sm italic text-[#555] leading-relaxed">
+              Design is our shared language
+            </p>
+
+            <p className="mt-4 text-sm leading-relaxed text-[#333]">
+              Every product decision carries a feeling. When we started building KEOS & K-Tern, we saw enterprise software full of friction, inconsistency, and invisible walls. We believed there had to be a better way — one built on genuine craft and human understanding.
+            </p>
+
+            <p className="mt-4 text-sm leading-relaxed text-[#333]">
+              A design system, to us, isn&apos;t just a library of components. It&apos;s the heartbeat of everything we ship — it&apos;s in every token we name, every interaction state we consider, and every decision we make together as a team.
+            </p>
+
+            <p className="mt-4 text-sm leading-relaxed text-[#333]">
+              We&apos;ve learned that great design is a practice. One that grows stronger every sprint. Through building with the Kaartech team, we&apos;ve discovered that consistency means: thinking before shipping, aligning before building, and caring deeply about the person on the other side of the screen.
+            </p>
+
+            <p className="mt-5 text-sm leading-relaxed text-[#333]">
+              Here&apos;s to building products where design isn&apos;t just seen — it is felt.
+            </p>
+
+            <p className="mt-6 text-sm text-[#555]">Warmly,</p>
+
+            <div className="mt-4 flex items-end gap-8">
+              <div className="text-center">
+                <p className="font-sans text-[13px] font-semibold text-[#1a1a2e]">Aswini B</p>
+                <p className="font-sans text-[11px] text-[#777]">Design Lead, KEOS & K-Tern</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="border-t px-6 py-20 sm:px-10">
         <div className="flex flex-col items-start gap-4">
           <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
@@ -384,7 +438,7 @@ export default function Home() {
         >
           Aswini
         </a>
-        {" "}Â· KEOS &amp; K-Tern
+        {" "}· KEOS &amp; K-Tern
       </footer>
       </div>
     </div>
