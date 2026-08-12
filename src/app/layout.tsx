@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { SplashLoader } from "@/components/site/splash-loader";
 import {
   Geist,
@@ -47,8 +47,8 @@ const fontVariables = [
   .join(" ");
 
 export const metadata: Metadata = {
-  title: "KEOS & K-tern Design System",
-  description: "The visual and experience layer behind KEOS & K-tern — color, type, motion, and interaction, unified and themeable.",
+  title: "KEOS & K-Tern.ai Design System",
+  description: "The visual and experience layer behind KEOS & K-Tern.ai â€” color, type, motion, and interaction, unified and themeable.",
 };
 
 const themeInitScript = `

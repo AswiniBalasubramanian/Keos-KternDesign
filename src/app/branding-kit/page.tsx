@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import { SiteNav } from "@/components/site/site-nav"
@@ -6,33 +6,33 @@ import { KMark } from "@/components/site/k-mark"
 import { KternMark } from "@/components/site/ktern-mark"
 import { Check, Copy, Download } from "lucide-react"
 
-// ── Color tokens ────────────────────────────────────────────────────────────
+// â”€â”€ Color tokens â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const brandColors = [
   { name: "Keos Orange",    hex: "#F97316", var: "--color-keos-orange",  group: "Primary" },
   { name: "Keos Dark",      hex: "#0D0D0D", var: "--color-keos-dark",    group: "Primary" },
-  { name: "K-tern Cyan",    hex: "#06B6D4", var: "--color-ktern-cyan",   group: "Secondary" },
-  { name: "K-tern Violet",  hex: "#8B5CF6", var: "--color-ktern-violet", group: "Secondary" },
+  { name: "K-Tern.ai Cyan",    hex: "#06B6D4", var: "--color-ktern-cyan",   group: "Secondary" },
+  { name: "K-Tern.ai Violet",  hex: "#8B5CF6", var: "--color-ktern-violet", group: "Secondary" },
   { name: "Surface",        hex: "#FAFAFA", var: "--background",          group: "Neutral" },
   { name: "Border",         hex: "#E5E7EB", var: "--border",              group: "Neutral" },
   { name: "Muted Text",     hex: "#6B7280", var: "--muted-foreground",    group: "Neutral" },
   { name: "Foreground",     hex: "#111827", var: "--foreground",          group: "Neutral" },
 ]
 
-// ── Type specimens ───────────────────────────────────────────────────────────
+// â”€â”€ Type specimens â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const typeSpecimens = [
   { name: "Display",   size: "text-5xl", weight: "font-bold",     sample: "Aa" },
   { name: "Heading 1", size: "text-3xl", weight: "font-bold",     sample: "Design Systems" },
   { name: "Heading 2", size: "text-xl",  weight: "font-semibold", sample: "Component Library" },
   { name: "Body",      size: "text-sm",  weight: "font-normal",   sample: "The visual and experience layer behind KEOS & KTERN." },
   { name: "Caption",   size: "text-xs",  weight: "font-normal",   sample: "Made once. Used everywhere. Unified and themeable." },
-  { name: "Mono",      size: "text-xs",  weight: "font-normal",   sample: "COLOR · TYPOGRAPHY · MOTION · SPACING",  mono: true },
+  { name: "Mono",      size: "text-xs",  weight: "font-normal",   sample: "COLOR Â· TYPOGRAPHY Â· MOTION Â· SPACING",  mono: true },
 ]
 
-// ── Logo usage rules ──────────────────────────────────────────────────────────
+// â”€â”€ Logo usage rules â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const logoRules = [
   { label: "Do",   ok: true,  text: "Use the logo on white or very dark backgrounds." },
   { label: "Do",   ok: true,  text: "Maintain minimum 16px clear space on all sides." },
-  { label: "Do",   ok: true,  text: "Scale proportionally — never stretch or distort." },
+  { label: "Do",   ok: true,  text: "Scale proportionally â€” never stretch or distort." },
   { label: "Don't", ok: false, text: "Don't rotate, skew, or add drop shadows." },
   { label: "Don't", ok: false, text: "Don't place the mark on a busy or low-contrast background." },
   { label: "Don't", ok: false, text: "Don't recolor the mark outside the approved palette." },
@@ -83,7 +83,7 @@ export default function BrandingKitPage() {
         <p className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">[ Brand ]</p>
         <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">Branding Kit</h1>
         <p className="mt-3 max-w-xl text-sm text-muted-foreground">
-          Official logos, colors, typography, and usage guidelines for KEOS &amp; K-tern.
+          Official logos, colors, typography, and usage guidelines for KEOS &amp; K-Tern.ai.
           Everything you need to represent the brand consistently.
         </p>
         <a
@@ -116,19 +116,19 @@ export default function BrandingKitPage() {
 
       <div className="mx-auto w-full max-w-6xl px-6 py-12 sm:px-10">
 
-        {/* ── Logos ─────────────────────────────────────────────────────── */}
+        {/* â”€â”€ Logos â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         {activeTab === "logos" && (
           <div className="space-y-12">
             <div>
               <h2 className="text-lg font-semibold tracking-tight">Logo Marks</h2>
-              <p className="mt-1 text-sm text-muted-foreground">Primary marks for KEOS and K-tern.</p>
+              <p className="mt-1 text-sm text-muted-foreground">Primary marks for KEOS and K-Tern.ai.</p>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { bg: "bg-background", border: true,  label: "KMark · Light",  mark: <KMark className="h-12 w-12 text-foreground" /> },
-                { bg: "bg-foreground", border: false,  label: "KMark · Dark",   mark: <KMark className="h-12 w-12 text-background" /> },
-                { bg: "bg-background", border: true,  label: "K-tern · Light", mark: <KternMark className="h-12 w-12 text-foreground" /> },
-                { bg: "bg-foreground", border: false,  label: "K-tern · Dark",  mark: <KternMark className="h-12 w-12 text-background" /> },
+                { bg: "bg-background", border: true,  label: "KMark Â· Light",  mark: <KMark className="h-12 w-12 text-foreground" /> },
+                { bg: "bg-foreground", border: false,  label: "KMark Â· Dark",   mark: <KMark className="h-12 w-12 text-background" /> },
+                { bg: "bg-background", border: true,  label: "K-Tern.ai Â· Light", mark: <KternMark className="h-12 w-12 text-foreground" /> },
+                { bg: "bg-foreground", border: false,  label: "K-Tern.ai Â· Dark",  mark: <KternMark className="h-12 w-12 text-background" /> },
               ].map((v, i) => (
                 <div key={i} className={`overflow-hidden rounded-xl ${v.border ? "border" : ""}`}>
                   <div className={`flex h-36 items-center justify-center ${v.bg}`}>
@@ -149,13 +149,13 @@ export default function BrandingKitPage() {
                 <KMark className="h-10 w-10 text-foreground" />
                 <span className="text-xl font-light text-muted-foreground/50">+</span>
                 <KternMark className="h-9 w-9 text-foreground" />
-                <span className="text-base font-semibold tracking-tight">Keos &amp; K-tern Design</span>
+                <span className="text-base font-semibold tracking-tight">Keos &amp; K-Tern.ai Design</span>
               </div>
             </div>
           </div>
         )}
 
-        {/* ── Colors ────────────────────────────────────────────────────── */}
+        {/* â”€â”€ Colors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         {activeTab === "colors" && (
           <div className="space-y-12">
             {(["Primary", "Secondary", "Neutral"] as const).map((group) => (
@@ -171,12 +171,12 @@ export default function BrandingKitPage() {
           </div>
         )}
 
-        {/* ── Typography ────────────────────────────────────────────────── */}
+        {/* â”€â”€ Typography â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         {activeTab === "typography" && (
           <div className="space-y-10">
             <div>
               <h2 className="text-lg font-semibold tracking-tight">Type Scale</h2>
-              <p className="mt-1 text-sm text-muted-foreground">DM Sans for UI text · DM Mono for labels and code.</p>
+              <p className="mt-1 text-sm text-muted-foreground">DM Sans for UI text Â· DM Mono for labels and code.</p>
             </div>
             <div className="divide-y rounded-xl border overflow-hidden">
               {typeSpecimens.map((t) => (
@@ -194,7 +194,7 @@ export default function BrandingKitPage() {
           </div>
         )}
 
-        {/* ── Guidelines ────────────────────────────────────────────────── */}
+        {/* â”€â”€ Guidelines â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         {activeTab === "guidelines" && (
           <div className="space-y-10">
             <div>

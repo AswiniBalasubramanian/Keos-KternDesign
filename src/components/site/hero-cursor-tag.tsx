@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useEffect, useRef, useState } from "react"
 
@@ -7,7 +7,7 @@ const S = 14 // triangle size in px
 // Direction: where the equilateral triangle TIP points
 type Dir = "dr" | "dl" | "ur" | "ul"
 
-// Prism-style equilateral triangle — default tip points RIGHT.
+// Prism-style equilateral triangle â€” default tip points RIGHT.
 // Rotated around center to face each direction.
 function Triangle({ color, dir }: { color: string; dir: Dir }) {
   const rotate: Record<Dir, number> = {
@@ -132,16 +132,16 @@ export function HeroCursorTag() {
   return (
     <div ref={ref} aria-hidden className="pointer-events-none absolute inset-0" style={{ zIndex: 5 }}>
 
-      {/* Keos — top-right; triangle tip points down-left toward title */}
+      {/* Keos â€” top-right; triangle tip points down-left toward title */}
       <CollabCursor label="Keos"   color="#800020" dir="dl" posStyle={{ left: "72%", top: "10%" }} />
 
-      {/* Aswini — upper-left; triangle tip points down-right toward "Design decisions" */}
+      {/* Aswini â€” upper-left; triangle tip points down-right toward "Design decisions" */}
       <CollabCursor label="Aswini" color="#FB540C" dir="dr" posStyle={{ left: "10%", top: "14%" }} />
 
-      {/* K-tern — lower-left; triangle tip points up-right toward title */}
-      <CollabCursor label="K-tern" color="#DC143C" dir="ur" posStyle={{ left: "12%", top: "68%" }} />
+      {/* K-Tern.ai â€” lower-left; triangle tip points up-right toward title */}
+      <CollabCursor label="K-Tern.ai" color="#DC143C" dir="ur" posStyle={{ left: "12%", top: "68%" }} />
 
-      {/* You — follows mouse; tip points down-right from pill */}
+      {/* You â€” follows mouse; tip points down-right from pill */}
       <CollabCursor
         label="You"
         color="#0D0D0D"

@@ -1,22 +1,22 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import { SiteNav } from "@/components/site/site-nav"
 import { Download, ExternalLink } from "lucide-react"
 
 const socialTemplates = [
-  { name: "LinkedIn Banner",       size: "1584 × 396",  tag: "LinkedIn",   bg: "#0A66C2" },
-  { name: "Twitter / X Header",    size: "1500 × 500",  tag: "X",          bg: "#000000" },
-  { name: "Instagram Square",      size: "1080 × 1080", tag: "Instagram",  bg: "#E1306C" },
-  { name: "Instagram Story",       size: "1080 × 1920", tag: "Instagram",  bg: "#833AB4" },
-  { name: "OG / Link Preview",     size: "1200 × 630",  tag: "Web",        bg: "#F97316" },
-  { name: "Email Header",          size: "600 × 200",   tag: "Email",      bg: "#06B6D4" },
+  { name: "LinkedIn Banner",       size: "1584 Ã— 396",  tag: "LinkedIn",   bg: "#0A66C2" },
+  { name: "Twitter / X Header",    size: "1500 Ã— 500",  tag: "X",          bg: "#000000" },
+  { name: "Instagram Square",      size: "1080 Ã— 1080", tag: "Instagram",  bg: "#E1306C" },
+  { name: "Instagram Story",       size: "1080 Ã— 1920", tag: "Instagram",  bg: "#833AB4" },
+  { name: "OG / Link Preview",     size: "1200 Ã— 630",  tag: "Web",        bg: "#F97316" },
+  { name: "Email Header",          size: "600 Ã— 200",   tag: "Email",      bg: "#06B6D4" },
 ]
 
 const presentationSlides = [
   { name: "Title Slide",    desc: "Full-bleed hero with logo lockup and tagline." },
   { name: "Agenda",         desc: "Clean numbered list with section icons." },
-  { name: "Two-column",     desc: "Text left, visual right — great for case studies." },
+  { name: "Two-column",     desc: "Text left, visual right â€” great for case studies." },
   { name: "Data Slide",     desc: "KPI spotlight cards with chart placeholder." },
   { name: "Quote",          desc: "Centered pull-quote with speaker attribution." },
   { name: "Thank You",      desc: "Closing slide with contact and QR code." },
@@ -29,15 +29,15 @@ const copySnippets = [
   },
   {
     label: "One-liner",
-    text: "KEOS & K-tern is the visual and experience layer unifying all our products — color, type, motion, and interaction, themeable in real time.",
+    text: "KEOS & K-Tern.ai is the visual and experience layer unifying all our products â€” color, type, motion, and interaction, themeable in real time.",
   },
   {
     label: "Mission",
-    text: "We believe great design should never be rebuilt from scratch. KEOS & K-tern gives every team a shared language that ships faster and stays consistent.",
+    text: "We believe great design should never be rebuilt from scratch. KEOS & K-Tern.ai gives every team a shared language that ships faster and stays consistent.",
   },
   {
     label: "Tweet-size",
-    text: "40+ components. 5 icon libraries. 10 typefaces. 2 live workspaces. One design system to rule them all. 🎨",
+    text: "40+ components. 5 icon libraries. 10 typefaces. 2 live workspaces. One design system to rule them all. ðŸŽ¨",
   },
 ]
 
@@ -79,7 +79,7 @@ export default function MarketingKitPage() {
         <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">Marketing Kit</h1>
         <p className="mt-3 max-w-xl text-sm text-muted-foreground">
           Ready-to-use templates for social media, presentations, email campaigns, and
-          copy — all on-brand for KEOS &amp; K-tern.
+          copy â€” all on-brand for KEOS &amp; K-Tern.ai.
         </p>
         <a
           href="#"

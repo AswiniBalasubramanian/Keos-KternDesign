@@ -1,4 +1,4 @@
-export interface BlockCategory {
+﻿export interface BlockCategory {
   id: string
   label: string
 }
@@ -10,7 +10,7 @@ export const blockCategories: BlockCategory[] = [
   { id: "login", label: "Login" },
   { id: "signup", label: "Signup" },
   { id: "keos", label: "Keos" },
-  { id: "ktern", label: "Ktern" },
+  { id: "ktern", label: "K-Tern.ai" },
 ]
 
 export interface BlockItem {

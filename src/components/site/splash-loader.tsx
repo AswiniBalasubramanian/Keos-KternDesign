@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useEffect, useState, useRef } from "react"
 import { KMark } from "@/components/site/k-mark"
@@ -15,7 +15,7 @@ export function SplashLoader() {
   useEffect(() => {
     if (sessionStorage.getItem("splash-done")) { setPhase("done"); return }
 
-    // Counter 0 → 100 in ~1.6 s with variable speed
+    // Counter 0 â†’ 100 in ~1.6 s with variable speed
     const tick = () => {
       countRef.current += Math.ceil(Math.random() * 4 + 1)
       if (countRef.current >= 100) {
@@ -58,7 +58,7 @@ export function SplashLoader() {
         pointerEvents: "none",
       }}
     >
-      {/* ── Subtle noise grain ───────────────────────────────────────── */}
+      {/* â”€â”€ Subtle noise grain â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -69,7 +69,7 @@ export function SplashLoader() {
         }}
       />
 
-      {/* ── Thin horizontal accent line ───────────────────────────────── */}
+      {/* â”€â”€ Thin horizontal accent line â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div
         className="absolute"
         style={{
@@ -84,7 +84,7 @@ export function SplashLoader() {
         }}
       />
 
-      {/* ── Center content ────────────────────────────────────────────── */}
+      {/* â”€â”€ Center content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div
         className="absolute inset-0 flex flex-col items-center justify-center"
         style={{ zIndex: 2 }}
@@ -121,7 +121,7 @@ export function SplashLoader() {
           </div>
         </div>
 
-        {/* Wordmark — clip-path reveal */}
+        {/* Wordmark â€” clip-path reveal */}
         <div style={{ marginTop: "1.5rem", overflow: "hidden" }}>
           <div style={{
             transform:  visible ? "translateY(0)" : "translateY(110%)",
@@ -135,12 +135,12 @@ export function SplashLoader() {
               textTransform: "uppercase",
               textAlign: "center",
             }}>
-              Keos &amp; K-tern Design System
+              Keos &amp; K-Tern.ai Design System
             </p>
           </div>
         </div>
 
-        {/* Tagline — delayed reveal */}
+        {/* Tagline â€” delayed reveal */}
         <div style={{ marginTop: "6px", overflow: "hidden" }}>
           <div style={{
             transform:  visible ? "translateY(0)" : "translateY(110%)",
@@ -160,7 +160,7 @@ export function SplashLoader() {
         </div>
       </div>
 
-      {/* ── Counter — bottom-right ────────────────────────────────────── */}
+      {/* â”€â”€ Counter â€” bottom-right â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div
         className="absolute bottom-8 right-10"
         style={{ zIndex: 2 }}
@@ -179,7 +179,7 @@ export function SplashLoader() {
         </p>
       </div>
 
-      {/* ── Year label — bottom-left ──────────────────────────────────── */}
+      {/* â”€â”€ Year label â€” bottom-left â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div
         className="absolute bottom-8 left-10"
         style={{ zIndex: 2 }}
@@ -193,11 +193,11 @@ export function SplashLoader() {
           opacity: visible ? 1 : 0,
           transition: "opacity 0.5s ease 0.5s",
         }}>
-          © 2026
+          Â© 2026
         </p>
       </div>
 
-      {/* ── Top-left brand mark ───────────────────────────────────────── */}
+      {/* â”€â”€ Top-left brand mark â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div
         className="absolute top-7 left-10 flex items-center gap-2"
         style={{ zIndex: 2 }}

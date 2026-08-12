@@ -1,4 +1,4 @@
-import Link from "next/link"
+﻿import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { SiteNav } from "@/components/site/site-nav"
@@ -13,7 +13,7 @@ export default function Home() {
 
       <div className="mx-auto w-full max-w-6xl border-x">
 
-      {/* ── Immersive image hero ─────────────────────────────────────────── */}
+      {/* â”€â”€ Immersive image hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section
         className="relative overflow-hidden border-b"
         style={{
@@ -22,7 +22,7 @@ export default function Home() {
           background: "linear-gradient(135deg, #6B0A1A 0%, #C0340E 30%, #E85520 52%, #FF7020 70%, #3A0610 100%)",
         }}
       >
-        {/* Actual hero image — sits above CSS bg, below overlays */}
+        {/* Actual hero image â€” sits above CSS bg, below overlays */}
         <Image
           src="/landing bg.png"
           alt=""
@@ -31,7 +31,7 @@ export default function Home() {
           className="object-cover object-center"
           style={{ zIndex: 1 }}
         />
-        {/* Dark vignette for text legibility — sits above image */}
+        {/* Dark vignette for text legibility â€” sits above image */}
         <div
           aria-hidden="true"
           className="absolute inset-0"
@@ -41,7 +41,7 @@ export default function Home() {
               "linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.48) 100%)",
           }}
         />
-        {/* Dot grid animation — direct child of section so section is the event parent */}
+        {/* Dot grid animation â€” direct child of section so section is the event parent */}
         <DotGridBackground
           className="absolute inset-0"
           style={{ zIndex: 3 }}
@@ -61,7 +61,7 @@ export default function Home() {
             <em className="not-italic opacity-80">Used everywhere.</em>
           </h1>
           <p className="animate-hero-reveal mx-auto mt-6 max-w-2xl text-base text-white/70 sm:text-lg" style={{ animationDelay: "0.22s" }}>
-            The visual and experience layer behind KEOS &amp; KTERN —<br />
+            The visual and experience layer behind KEOS &amp; KTERN â€”<br />
             color, type, motion, and interaction, unified and themeable in real time.
           </p>
           <div className="animate-hero-reveal mt-10 flex items-center gap-4" style={{ animationDelay: "0.36s" }}>
@@ -78,7 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Latest Releases ─────────────────────────────────────────────── */}
+      {/* â”€â”€ Latest Releases â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="border-b px-6 py-16 sm:px-10">
         <div className="flex items-end justify-between gap-4">
           <div>
@@ -93,7 +93,7 @@ export default function Home() {
             href="/news"
             className="hidden shrink-0 font-mono text-xs tracking-widest text-muted-foreground uppercase underline-offset-4 hover:text-foreground hover:underline sm:block"
           >
-            View all →
+            View all â†’
           </Link>
         </div>
 
@@ -106,10 +106,10 @@ export default function Home() {
                 Internal
               </span>
               <h3 className="text-lg font-bold leading-snug tracking-tight">
-                Keos v0.1 — First internal release
+                Keos v0.1 â€” First internal release
               </h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                The first internal milestone of the Keos &amp; K-tern Design System, shipped to the Kaartech team. Includes foundation tokens, core components, and the Studio theme switcher.
+                The first internal milestone of the Keos &amp; K-Tern.ai Design System, shipped to the Kaartech team. Includes foundation tokens, core components, and the Studio theme switcher.
               </p>
             </div>
 
@@ -134,7 +134,7 @@ export default function Home() {
             </div>
           </article>
 
-          {/* Placeholder — more coming soon */}
+          {/* Placeholder â€” more coming soon */}
           <div className="hidden items-center justify-center rounded-2xl border border-dashed sm:flex lg:col-span-2">
             <p className="font-mono text-xs tracking-widest text-muted-foreground/40 uppercase">
               More releases coming soon
@@ -144,7 +144,7 @@ export default function Home() {
       </section>
 
 
-      {/* ── System Bento ─────────────────────────────────────────────────── */}
+      {/* â”€â”€ System Bento â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="border-t px-6 py-20 sm:px-10">
         <div className="text-center">
           <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">[ System ]</p>
@@ -156,7 +156,7 @@ export default function Home() {
         {/* True bento: 3-col grid with row-span cards */}
         <div className="mt-12 grid grid-cols-3 grid-rows-[240px_200px_220px] gap-3 [&>*]:overflow-hidden [&>*]:rounded-2xl [&>*]:border">
 
-          {/* Color — tall, spans 2 rows */}
+          {/* Color â€” tall, spans 2 rows */}
           <Link href="/studio" className="group row-span-2 flex flex-col justify-between bg-background p-6 transition hover:bg-muted/30">
             <div className="flex items-center gap-2 text-xs font-semibold">
               <span className="flex h-6 w-6 items-center justify-center rounded-md bg-foreground text-background text-[10px]">C</span>
@@ -180,7 +180,7 @@ export default function Home() {
               Typography
             </div>
             <div className="rounded-xl border bg-muted/30 p-4">
-              <p className="font-mono text-[9px] text-muted-foreground">DM Sans — Primary</p>
+              <p className="font-mono text-[9px] text-muted-foreground">DM Sans â€” Primary</p>
               <p className="mt-1 text-xl font-bold leading-tight tracking-tight">Design<br/>Language</p>
               <p className="mt-1 text-[10px] text-muted-foreground">Aa Bb Cc 0123</p>
             </div>
@@ -201,7 +201,7 @@ export default function Home() {
                 <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-[#FF6900] px-3 py-1.5 text-[11px] text-white">Show me the dashboard</div>
               </div>
               <div className="flex justify-start">
-                <div className="max-w-[80%] rounded-2xl rounded-tl-sm border bg-muted px-3 py-1.5 text-[11px]">Here&apos;s your summary ✦</div>
+                <div className="max-w-[80%] rounded-2xl rounded-tl-sm border bg-muted px-3 py-1.5 text-[11px]">Here&apos;s your summary âœ¦</div>
               </div>
             </div>
             <div>
@@ -210,21 +210,21 @@ export default function Home() {
             </div>
           </Link>
 
-          {/* Banner — 2 cols */}
+          {/* Banner â€” 2 cols */}
           <Link href="/studio" className="group col-span-2 flex flex-col items-center justify-center bg-foreground px-8 text-center transition hover:opacity-90">
             <span className="font-mono text-[9px] tracking-widest text-background/40 uppercase">[ System ]</span>
             <p className="mt-2 text-2xl font-bold tracking-tight text-background sm:text-3xl">
-              KEOS &amp; K-tern<br/>Design System
+              KEOS &amp; K-Tern.ai<br/>Design System
             </p>
             <span className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-background/20 px-4 py-1.5 font-mono text-[10px] tracking-widest text-background/60 uppercase transition group-hover:border-background/50 group-hover:text-background/90">
-              Explore Studio →
+              Explore Studio â†’
             </span>
           </Link>
 
           {/* Accessibility */}
           <Link href="/accessibility" className="group flex flex-col justify-between bg-background p-5 transition hover:bg-muted/30">
             <div className="flex items-center gap-2 text-xs font-semibold">
-              <span className="flex h-6 w-6 items-center justify-center rounded-md border text-[10px]">♿</span>
+              <span className="flex h-6 w-6 items-center justify-center rounded-md border text-[10px]">â™¿</span>
               Accessibility
             </div>
             <div className="space-y-1.5">
@@ -263,7 +263,7 @@ export default function Home() {
           {/* Iconography */}
           <Link href="/studio" className="group flex flex-col justify-between bg-background p-5 transition hover:bg-muted/30">
             <div className="flex items-center gap-2 text-xs font-semibold">
-              <span className="flex h-6 w-6 items-center justify-center rounded-md border text-[10px]">⌘</span>
+              <span className="flex h-6 w-6 items-center justify-center rounded-md border text-[10px]">âŒ˜</span>
               Iconography
             </div>
             <div className="space-y-1.5">
@@ -283,7 +283,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Meet our team ───────────────────────────────────────────────── */}
+      {/* â”€â”€ Meet our team â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="border-t px-6 py-20 sm:px-10">
         <div className="flex flex-col items-center text-center">
           <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
@@ -293,13 +293,13 @@ export default function Home() {
             Meet our team
           </h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            The people behind KEOS &amp; K-tern — designers, engineers, and thinkers building the future of enterprise AI products at Kaartech.
+            The people behind KEOS &amp; K-Tern.ai â€” designers, engineers, and thinkers building the future of enterprise AI products at Kaartech.
           </p>
           <div className="mt-10 w-full overflow-hidden rounded-2xl border">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/team.jpg"
-              alt="The KEOS & K-tern team"
+              alt="The KEOS & K-Tern.ai team"
               className="w-full object-cover object-center transition-all duration-700 grayscale hover:grayscale-0"
               style={{ maxHeight: "520px", display: "block" }}
             />
@@ -314,7 +314,7 @@ export default function Home() {
 
           {/* Quote */}
           <div className="mt-16 flex w-full flex-col items-start gap-6 rounded-2xl border bg-muted/20 px-8 py-10 text-left sm:flex-row sm:items-center sm:gap-10 sm:px-12">
-            {/* Photo — illustration by default, real photo on hover */}
+            {/* Photo â€” illustration by default, real photo on hover */}
             <div className="group/photo relative h-36 w-36 shrink-0 overflow-hidden rounded-2xl border sm:h-44 sm:w-44">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -384,7 +384,7 @@ export default function Home() {
         >
           Aswini
         </a>
-        {" "}· KEOS &amp; K-tern
+        {" "}Â· KEOS &amp; K-Tern.ai
       </footer>
       </div>
     </div>

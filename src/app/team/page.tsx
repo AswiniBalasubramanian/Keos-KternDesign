@@ -1,7 +1,7 @@
-import { SiteNav } from "@/components/site/site-nav"
+﻿import { SiteNav } from "@/components/site/site-nav"
 
 const members = [
-  { name: "Edson", role: "Head of K-tern", dept: "Product" },
+  { name: "Edson", role: "Head of K-Tern.ai", dept: "Product" },
   { name: "Aswini B", role: "Design Lead", dept: "Design" },
   { name: "Vijayaraghavan", role: "Lead Engineer", dept: "Engineering" },
   { name: "Team Member", role: "Frontend Engineer", dept: "Engineering" },
@@ -35,7 +35,7 @@ export default function TeamPage() {
             <span className="text-muted-foreground">of enterprise design.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            KEOS &amp; K-tern is the design system powering AI-native enterprise products at Kaartech.
+            KEOS &amp; K-Tern.ai is the design system powering AI-native enterprise products at Kaartech.
             Our team of designers, engineers, and researchers work together to build tools that help millions of users work smarter.
           </p>
         </div>
@@ -48,13 +48,13 @@ export default function TeamPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/team.jpg"
-              alt="The KEOS & K-tern team"
+              alt="The KEOS & K-Tern.ai team"
               className="w-full object-cover object-center transition-all duration-700 grayscale hover:grayscale-0"
               style={{ maxHeight: "600px", display: "block" }}
             />
           </div>
           <p className="mt-4 text-center font-mono text-xs tracking-widest text-muted-foreground/60 uppercase">
-            The KEOS &amp; K-tern team — Kaartech, 2026
+            The KEOS &amp; K-Tern.ai team â€” Kaartech, 2026
           </p>
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function TeamPage() {
               },
               {
                 title: "Ship with craft",
-                body: "We care about the details — motion, contrast, spacing, and accessibility — because the details add up to the experience.",
+                body: "We care about the details â€” motion, contrast, spacing, and accessibility â€” because the details add up to the experience.",
               },
             ].map((v) => (
               <div key={v.title} className="bg-background px-6 py-8">
@@ -154,7 +154,7 @@ export default function TeamPage() {
         >
           Aswini
         </a>
-        {" "}· KEOS &amp; K-tern
+        {" "}Â· KEOS &amp; K-Tern.ai
       </footer>
     </div>
   )

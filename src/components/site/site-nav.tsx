@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -19,7 +19,7 @@ export function SiteNav() {
         <KMark className="h-7 w-7 text-foreground" />
         <span className="text-muted-foreground/60 text-base font-light">+</span>
         <KternMark className="h-6 w-6 text-foreground" />
-        <span className="text-sm font-semibold tracking-tight whitespace-nowrap">Keos &amp; K-tern Design</span>
+        <span className="text-sm font-semibold tracking-tight whitespace-nowrap">Keos &amp; K-Tern.ai Design</span>
       </Link>
 
       <nav className="flex items-center justify-center gap-5 font-mono text-xs tracking-widest whitespace-nowrap text-muted-foreground uppercase">
