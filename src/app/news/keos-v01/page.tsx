@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { SiteNav } from "@/components/site/site-nav"
-import { KMark } from "@/components/site/k-mark"
 
 export const metadata = {
   title: "Keos v0.1 — First internal release",
@@ -16,83 +15,16 @@ export default function KeosV01Page() {
       <div className="mx-auto w-full max-w-6xl border-x">
 
         {/* ── Hero thumbnail ──────────────────────────────────────────────── */}
-        <div
-          className="relative flex items-center justify-center overflow-hidden border-b"
-          style={{ minHeight: "520px", background: "#8B0A14" }}
-        >
-          {/* Full SVG scene — exact match of the Keos brand image */}
-          <svg
-            className="pointer-events-none absolute inset-0 h-full w-full"
-            viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              {/* Radial gradient — hot orange center */}
-              <radialGradient id="bg" cx="55%" cy="50%" r="65%">
-                <stop offset="0%" stopColor="#F05A00" />
-                <stop offset="40%" stopColor="#C0280C" />
-                <stop offset="100%" stopColor="#5C0010" />
-              </radialGradient>
-              {/* Halftone pattern */}
-              <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
-                <circle cx="11" cy="11" r="1" fill="rgba(255,255,255,0.14)" />
-              </pattern>
-            </defs>
-
-            {/* Base gradient fill */}
-            <rect width="1440" height="520" fill="url(#bg)" />
-
-            {/* ── Large overlapping diamond / rhombus shapes ─────────────── */}
-            {/* Top-left dark crimson diamond */}
-            <polygon points="0,0 340,200 200,440 -120,240" fill="#6B0010" opacity="0.9" />
-            {/* Top-left purple bleed */}
-            <polygon points="-60,-20 260,160 80,380 -200,200" fill="#5A0040" opacity="0.5" />
-            {/* Center-left large dark red slab */}
-            <polygon points="120,0 560,0 480,520 80,520" fill="#8C0014" opacity="0.65" />
-            {/* Top center swooping dark shape */}
-            <polygon points="300,-60 760,0 700,300 200,200" fill="#7A0012" opacity="0.7" />
-            {/* Right large orange-red diamond */}
-            <polygon points="800,80 1200,0 1500,260 1100,520" fill="#D03800" opacity="0.6" />
-            {/* Bottom-right deep red diamond */}
-            <polygon points="900,300 1440,200 1440,520 700,520" fill="#6A0010" opacity="0.75" />
-            {/* Center mid-right orange slab */}
-            <polygon points="600,100 1000,60 1060,400 620,420" fill="#E04500" opacity="0.45" />
-            {/* Top-right bright orange triangle */}
-            <polygon points="1100,-20 1440,-20 1440,260 1200,300" fill="#F06000" opacity="0.55" />
-            {/* Small dark accent bottom-center */}
-            <polygon points="400,380 720,300 780,520 360,520" fill="#5A0012" opacity="0.6" />
-
-            {/* Halftone overlay */}
-            <rect width="1440" height="520" fill="url(#dots)" />
-
-            {/* ── Sparkle stars ─────────────────────────────────────────── */}
-            {/* top-left small */}
-            <g transform="translate(110,88)" opacity="0.35">
-              <path d="M0,-14 L2.5,0 L14,0 L2.5,2.5 L0,14 L-2.5,2.5 L-14,0 L-2.5,-2.5 Z" fill="white"/>
-            </g>
-            {/* left-mid */}
-            <g transform="translate(60,290)" opacity="0.22">
-              <path d="M0,-10 L1.8,0 L10,0 L1.8,1.8 L0,10 L-1.8,1.8 L-10,0 L-1.8,-1.8 Z" fill="white"/>
-            </g>
-            {/* right-center-bottom */}
-            <g transform="translate(1300,390)" opacity="0.28">
-              <path d="M0,-18 L3,0 L18,0 L3,3 L0,18 L-3,3 L-18,0 L-3,-3 Z" fill="white"/>
-            </g>
-            {/* top-right */}
-            <g transform="translate(1380,80)" opacity="0.2">
-              <path d="M0,-10 L1.8,0 L10,0 L1.8,1.8 L0,10 L-1.8,1.8 L-10,0 L-1.8,-1.8 Z" fill="white"/>
-            </g>
-            {/* bottom-left */}
-            <g transform="translate(330,460)" opacity="0.18">
-              <path d="M0,-8 L1.4,0 L8,0 L1.4,1.4 L0,8 L-1.4,1.4 L-8,0 L-1.4,-1.4 Z" fill="white"/>
-            </g>
-          </svg>
-
-          {/* Centred K mark */}
-          <div className="relative flex flex-col items-center gap-3" style={{ zIndex: 2, color: "#F5EDE0" }}>
-            <KMark className="h-28 w-28 drop-shadow-2xl" />
-          </div>
+        <div className="relative overflow-hidden border-b" style={{ minHeight: "520px" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/keos-v01-thumb.svg"
+            alt="Keos v0.1 release thumbnail"
+            className="h-full w-full object-cover"
+            style={{ minHeight: "520px", display: "block" }}
+          />
         </div>
+
 
         {/* ── Article layout ──────────────────────────────────────────────── */}
         <div className="grid grid-cols-1 gap-0 lg:grid-cols-[1fr_320px]">
@@ -226,6 +158,39 @@ export default function KeosV01Page() {
               <p className="border-l-2 border-[#FB540C] pl-5 italic text-muted-foreground">
                 "Every answer starts with a question — you just need the right one."
               </p>
+            </div>
+
+            {/* ── Full document block ─────────────────────────────────── */}
+            <div className="mt-14 rounded-2xl border overflow-hidden">
+              {/* Cover image */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/keos-v01-cover.svg"
+                alt="KEOS v1 Knowledge Base document cover"
+                className="w-full object-cover"
+                style={{ maxHeight: "340px", objectPosition: "top" }}
+              />
+              {/* Footer row */}
+              <div className="flex items-center justify-between gap-4 border-t bg-muted/30 px-5 py-4">
+                <div>
+                  <p className="text-sm font-semibold" style={{ fontFamily: "var(--font-figtree)" }}>
+                    KEOS v1 — Knowledge Base
+                  </p>
+                  <p className="mt-0.5 font-mono text-[10px] tracking-widest text-muted-foreground uppercase">
+                    Full document · PDF
+                  </p>
+                </div>
+                <a
+                  href="https://kaartechit.sharepoint.com/:b:/g/IQCGqYwZEL7cRZ851AUYAjMAAZK9bC0meVhRSh19YJSk0y0?e=IxbmN8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex shrink-0 items-center gap-2 rounded-full bg-foreground px-4 py-2 text-xs font-semibold text-background transition hover:opacity-80"
+                  style={{ fontFamily: "var(--font-figtree)" }}
+                >
+                  View full document
+                  <ArrowRight className="h-3 w-3" />
+                </a>
+              </div>
             </div>
 
             {/* CTA */}
