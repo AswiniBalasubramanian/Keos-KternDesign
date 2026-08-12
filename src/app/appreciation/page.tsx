@@ -73,9 +73,14 @@ function ProductCard({ name, role, message, source, isNew }: ProductCard) {
     <div
       className="break-inside-avoid rounded-sm p-7 transition-transform hover:-translate-y-0.5"
       style={{
-        background: "#fdfcf7",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.07), 0 0 0 1px rgba(0,0,0,0.04)",
-        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")`,
+        backgroundColor: "#edeae5",
+        backgroundImage: [
+          "repeating-linear-gradient(0deg,   rgba(255,255,255,0.55) 0px, rgba(255,255,255,0.55) 1px, transparent 1px, transparent 4px)",
+          "repeating-linear-gradient(90deg,  rgba(255,255,255,0.55) 0px, rgba(255,255,255,0.55) 1px, transparent 1px, transparent 4px)",
+          "repeating-linear-gradient(0deg,   rgba(0,0,0,0.045)      0px, rgba(0,0,0,0.045)      1px, transparent 1px, transparent 4px)",
+          "repeating-linear-gradient(90deg,  rgba(0,0,0,0.045)      0px, rgba(0,0,0,0.045)      1px, transparent 1px, transparent 4px)",
+        ].join(", "),
+        boxShadow: "0 2px 12px rgba(0,0,0,0.08), 0 0 0 1px rgba(0,0,0,0.05)",
       }}
     >
       {isNew && (
