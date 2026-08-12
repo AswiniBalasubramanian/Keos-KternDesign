@@ -51,7 +51,6 @@ export interface LandingStat {
 }
 
 export const landingStats: LandingStat[] = [
-  { id: "s1", value: "40+", label: "Components" },
   { id: "s2", value: "5", label: "Icon libraries" },
   { id: "s3", value: "10", label: "Typefaces" },
   { id: "s4", value: "2", label: "Live workspaces" },

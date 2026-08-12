@@ -54,7 +54,7 @@ export const chartColors: Record<string, string[]> = {
   Neutral: ["oklch(0.55 0 0)", "oklch(0.65 0 0)", "oklch(0.45 0 0)", "oklch(0.75 0 0)", "oklch(0.35 0 0)"],
   Vivid: ["oklch(0.6 0.2 30)", "oklch(0.6 0.2 140)", "oklch(0.6 0.2 250)", "oklch(0.7 0.2 90)", "oklch(0.6 0.2 320)"],
   Ocean: ["oklch(0.55 0.15 220)", "oklch(0.65 0.13 200)", "oklch(0.45 0.12 240)", "oklch(0.7 0.1 190)", "oklch(0.4 0.1 250)"],
-  Orange: ["oklch(0.86 0.1 55)", "oklch(0.702 0.226 42.7)", "oklch(0.59 0.21 38)", "oklch(0.48 0.19 32)", "oklch(0.37 0.15 27)"],
+  Orange: ["#FFB86A", "#FF6900", "#F54900", "#CA3500", "#9F2D00"],
 }
 
 export const styles = ["Nova", "Mono", "Classic", "Soft"] as const

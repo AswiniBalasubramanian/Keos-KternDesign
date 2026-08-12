@@ -8,6 +8,7 @@ import { ComponentDetailClient } from "@/components/site/component-detail-client
 import { ChartsContent } from "@/app/charts/page"
 import { AiUxContent } from "@/app/ai-ux/page"
 import { PatternsContent } from "@/app/blocks/page"
+import { ColorSwatch } from "@/components/site/color-swatch"
 import {
   foundationSections,
   colorTokens,
@@ -370,10 +371,7 @@ export default function FoundationPage() {
                       <p className="mb-3 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">Semantic Tokens</p>
                       <div className="grid grid-cols-3 gap-4 sm:grid-cols-5">
                         {colorTokens.map((c) => (
-                          <div key={c.name} className="space-y-1.5">
-                            <div className={`h-16 w-full rounded-md ${c.className}`} />
-                            <p className="text-xs text-muted-foreground">{c.name}</p>
-                          </div>
+                          <ColorSwatch key={c.name} name={c.name} className={c.className} />
                         ))}
                       </div>
                     </div>
@@ -381,10 +379,7 @@ export default function FoundationPage() {
                       <p className="mb-3 font-mono text-[11px] tracking-widest text-muted-foreground uppercase">Chart Palette</p>
                       <div className="grid grid-cols-3 gap-4 sm:grid-cols-5">
                         {chartTokens.map((c) => (
-                          <div key={c.name} className="space-y-1.5">
-                            <div className={`h-16 w-full rounded-md ${c.className}`} />
-                            <p className="text-xs text-muted-foreground">{c.name}</p>
-                          </div>
+                          <ColorSwatch key={c.name} name={c.name} className={c.className} />
                         ))}
                       </div>
                     </div>

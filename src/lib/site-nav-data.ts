@@ -24,6 +24,7 @@ export const siteNavLinks: SiteNavLink[] = [
       { id: "blocks",          label: "Patterns",    href: "/blocks" },
       { id: "charts",          label: "Charts",      href: "/charts" },
       { id: "ai-ux",           label: "AI UX",       href: "/ai-ux" },
+      { id: "accessibility",   label: "Accessibility", href: "/accessibility" },
     ],
   },
   {
@@ -33,6 +34,8 @@ export const siteNavLinks: SiteNavLink[] = [
     children: [
       { id: "branding-kit",   label: "Branding Kit",   href: "/branding-kit" },
       { id: "marketing-kit",  label: "Marketing Kit",  href: "/marketing-kit" },
+      { id: "blogs",          label: "Blogs",          href: "/blogs" },
+      { id: "keos-tv",        label: "KEOS TV",        href: "/keos-tv" },
     ],
   },
   { id: "news",      label: "News",   href: "/news" },
