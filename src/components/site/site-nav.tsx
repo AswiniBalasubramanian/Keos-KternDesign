@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Search, Mail, ChevronDown } from "lucide-react"
+import { Search, Mail, ChevronDown, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { KMark } from "@/components/site/k-mark"
@@ -91,6 +91,16 @@ export function SiteNav() {
           render={<Link href="/contact" />}
         >
           <Mail className="h-4 w-4" />
+        </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          nativeButton={false}
+          className="rounded-full text-rose-500 hover:text-rose-600 hover:border-rose-300"
+          aria-label="Wall of Appreciation"
+          render={<Link href="/appreciation" />}
+        >
+          <Heart className="h-4 w-4" />
         </Button>
       </div>
     </header>
