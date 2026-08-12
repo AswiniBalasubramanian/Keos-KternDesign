@@ -281,53 +281,35 @@ export default function AppreciationPage() {
         </div>
       </section>
 
-      {/* Content — painted sides + white center card */}
-      <section className="relative overflow-hidden border-t" style={{ minHeight: "600px" }}>
-        {/* Split painted background */}
-        <div className="absolute inset-0 flex pointer-events-none" aria-hidden="true">
-          <div className="w-[28%] overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/team.jpg" alt="" className="h-full w-full object-cover object-left"
-              style={{ filter: "saturate(2) contrast(1.2) brightness(0.7)" }} />
-          </div>
-          <div className="flex-1 bg-background" />
-          <div className="w-[28%] overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/team.jpg" alt="" className="h-full w-full object-cover object-right"
-              style={{ filter: "saturate(2) contrast(1.2) brightness(0.7)" }} />
-          </div>
-        </div>
-
-        {/* White center card */}
-        <div className="relative z-10 flex justify-center px-4 py-14">
-          <div className="w-full max-w-3xl bg-white shadow-2xl rounded-sm px-8 py-10 sm:px-12 sm:py-14">
-            {tab === "product" ? (
-              <div className="space-y-8">
-                <div className="columns-1 gap-5 space-y-5 sm:columns-2">
-                  {productCards.map((item, i) => <ProductCard key={i} {...item} />)}
-                </div>
-                <div className="border-t pt-8">
-                  <SubmitForm type="product" onProductAdded={addProductCard} onPeerAdded={addPeerCard} />
-                </div>
+      {/* Content */}
+      <section className="border-t px-6 py-16 sm:px-10">
+        <div className="mx-auto max-w-5xl">
+          {tab === "product" ? (
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+              <div className="lg:col-span-2 columns-1 gap-5 space-y-5 sm:columns-2">
+                {productCards.map((item, i) => <ProductCard key={i} {...item} />)}
               </div>
-            ) : (
-              <div className="space-y-8">
-                <div className="columns-1 gap-5 space-y-5 sm:columns-2">
-                  {peerCards.map((item, i) => <PeerCard key={i} {...item} />)}
-                  {peerCards.length === 0 && (
-                    <div className="rounded-2xl border border-dashed px-8 py-12 text-center">
-                      <p className="text-2xl">🫶</p>
-                      <p className="mt-3 font-mono text-xs tracking-widest text-muted-foreground/50 uppercase">Be the first</p>
-                      <p className="mt-1 text-sm text-muted-foreground">Recognise a teammate&apos;s great work.</p>
-                    </div>
-                  )}
-                </div>
-                <div className="border-t pt-8">
-                  <SubmitForm type="peer" onProductAdded={addProductCard} onPeerAdded={addPeerCard} />
-                </div>
+              <div>
+                <SubmitForm type="product" onProductAdded={addProductCard} onPeerAdded={addPeerCard} />
               </div>
-            )}
-          </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+              <div className="lg:col-span-2 columns-1 gap-5 space-y-5 sm:columns-2">
+                {peerCards.map((item, i) => <PeerCard key={i} {...item} />)}
+                {peerCards.length === 0 && (
+                  <div className="rounded-2xl border border-dashed px-8 py-12 text-center col-span-2">
+                    <p className="text-2xl">🫶</p>
+                    <p className="mt-3 font-mono text-xs tracking-widest text-muted-foreground/50 uppercase">Be the first</p>
+                    <p className="mt-1 text-sm text-muted-foreground">Recognise a teammate&apos;s great work.</p>
+                  </div>
+                )}
+              </div>
+              <div>
+                <SubmitForm type="peer" onProductAdded={addProductCard} onPeerAdded={addPeerCard} />
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
