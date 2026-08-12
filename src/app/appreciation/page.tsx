@@ -1,6 +1,6 @@
 import { SiteNav } from "@/components/site/site-nav"
 
-const appreciations = [
+const teamAppreciations = [
   {
     name: "Edson",
     role: "Head of K-Tern",
@@ -14,12 +14,36 @@ const appreciations = [
     emoji: "⚡",
   },
   {
-    name: "Kaartech Team",
-    role: "Internal",
-    message: "KEOS & K-Tern is the backbone of everything we build. Proud to ship with it.",
-    emoji: "💙",
+    name: "Aswini B",
+    role: "Design Lead",
+    message: "Building KEOS & K-Tern has been the most meaningful design work I've done. Every detail matters.",
+    emoji: "✨",
   },
 ]
+
+const externalAppreciations: { name: string; role: string; message: string; emoji: string }[] = [
+  // Add external appreciations here as they come in
+]
+
+function AppreciationCard({ name, role, message, emoji }: { name: string; role: string; message: string; emoji: string }) {
+  return (
+    <div className="break-inside-avoid rounded-2xl border bg-muted/20 p-6 transition hover:bg-muted/40">
+      <span className="text-3xl">{emoji}</span>
+      <p className="mt-4 text-sm leading-relaxed text-foreground">
+        &ldquo;{message}&rdquo;
+      </p>
+      <div className="mt-5 flex items-center gap-3">
+        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-border font-mono text-xs font-bold text-muted-foreground">
+          {name[0]}
+        </div>
+        <div>
+          <p className="text-xs font-semibold">{name}</p>
+          <p className="text-[11px] text-muted-foreground">{role}</p>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function AppreciationPage() {
   return (
@@ -37,47 +61,77 @@ export default function AppreciationPage() {
             <span className="text-muted-foreground">the people we build for.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            Appreciation from teammates, collaborators, and everyone who has used KEOS & K-Tern to build something great.
+            Gratitude from teammates and collaborators who have used KEOS & K-Tern to build something great.
           </p>
         </div>
       </section>
 
-      {/* Cards */}
-      <section className="px-6 py-16 sm:px-10">
-        <div className="mx-auto max-w-5xl columns-1 gap-5 space-y-5 sm:columns-2 lg:columns-3">
-          {appreciations.map((item, i) => (
-            <div
-              key={i}
-              className="break-inside-avoid rounded-2xl border bg-muted/20 p-6 transition hover:bg-muted/40"
-            >
-              <span className="text-3xl">{item.emoji}</span>
-              <p className="mt-4 text-sm leading-relaxed text-foreground">
-                &ldquo;{item.message}&rdquo;
-              </p>
-              <div className="mt-5 flex items-center gap-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-border font-mono text-xs font-bold text-muted-foreground">
-                  {item.name[0]}
-                </div>
-                <div>
-                  <p className="text-xs font-semibold">{item.name}</p>
-                  <p className="text-[11px] text-muted-foreground">{item.role}</p>
-                </div>
-              </div>
+      {/* Team Section */}
+      <section className="border-b px-6 py-16 sm:px-10">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-8 flex items-center gap-3">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-foreground text-[10px] text-background">♥</span>
+            <div>
+              <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">From the team</p>
+              <h2 className="mt-0.5 text-lg font-bold tracking-tight">Internal appreciation</h2>
             </div>
-          ))}
-
-          {/* Empty card — invite */}
-          <div className="break-inside-avoid rounded-2xl border border-dashed p-6 text-center">
-            <p className="font-mono text-[11px] tracking-widest text-muted-foreground/50 uppercase">
-              Your words here
-            </p>
-            <a
-              href="/contact"
-              className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-xs font-semibold text-background transition hover:opacity-80"
-            >
-              Share appreciation ♥
-            </a>
           </div>
+
+          <div className="columns-1 gap-5 space-y-5 sm:columns-2 lg:columns-3">
+            {teamAppreciations.map((item, i) => (
+              <AppreciationCard key={i} {...item} />
+            ))}
+            {/* Invite card */}
+            <div className="break-inside-avoid rounded-2xl border border-dashed p-6 text-center">
+              <p className="font-mono text-[11px] tracking-widest text-muted-foreground/50 uppercase">
+                Team member?
+              </p>
+              <p className="mt-2 text-xs text-muted-foreground">Share what KEOS & K-Tern means to you.</p>
+              <a
+                href="/contact"
+                className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-foreground px-4 py-2 text-xs font-semibold text-background transition hover:opacity-80"
+              >
+                Add yours ♥
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* External Section */}
+      <section className="px-6 py-16 sm:px-10">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-8 flex items-center gap-3">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full border text-[10px]">✦</span>
+            <div>
+              <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">From outside</p>
+              <h2 className="mt-0.5 text-lg font-bold tracking-tight">External appreciation</h2>
+            </div>
+          </div>
+
+          {externalAppreciations.length > 0 ? (
+            <div className="columns-1 gap-5 space-y-5 sm:columns-2 lg:columns-3">
+              {externalAppreciations.map((item, i) => (
+                <AppreciationCard key={i} {...item} />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-2xl border border-dashed px-8 py-16 text-center">
+              <p className="text-2xl">💌</p>
+              <p className="mt-3 font-mono text-xs tracking-widest text-muted-foreground/50 uppercase">
+                Waiting for the first one
+              </p>
+              <p className="mx-auto mt-2 max-w-xs text-sm text-muted-foreground">
+                Used KEOS & K-Tern in your product or project? We'd love to hear from you.
+              </p>
+              <a
+                href="/contact"
+                className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-foreground px-5 py-2.5 text-xs font-semibold text-background transition hover:opacity-80"
+              >
+                Share your experience →
+              </a>
+            </div>
+          )}
         </div>
       </section>
 
