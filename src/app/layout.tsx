@@ -47,8 +47,8 @@ const fontVariables = [
   .join(" ");
 
 export const metadata: Metadata = {
-  title: "KEOS & K-Tern.ai Design System",
-  description: "The visual and experience layer behind KEOS & K-Tern.ai â€” color, type, motion, and interaction, unified and themeable.",
+  title: "KEOS & K-Tern Design System",
+  description: "The visual and experience layer behind KEOS & K-Tern â€” color, type, motion, and interaction, unified and themeable.",
 };
 
 const themeInitScript = `

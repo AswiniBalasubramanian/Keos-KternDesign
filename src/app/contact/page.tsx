@@ -116,10 +116,10 @@ export default function ContactPage() {
       }
 
       await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        "service_6kfp61k",
+        "template_9dnt128",
         templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+        "sLIeQuNU2As7OPJX2",
       )
 
       setShowSuccess(true)

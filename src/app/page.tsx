@@ -109,7 +109,7 @@ export default function Home() {
                 Keos v0.1 — First internal release
               </h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                The first internal milestone of the Keos &amp; K-Tern.ai Design System, shipped to the Kaartech team. Includes foundation tokens, core components, and the Studio theme switcher.
+                The first internal milestone of the Keos &amp; K-Tern Design System, shipped to the Kaartech team. Includes foundation tokens, core components, and the Studio theme switcher.
               </p>
             </div>
 
@@ -214,7 +214,7 @@ export default function Home() {
           <Link href="/studio" className="group col-span-2 flex flex-col items-center justify-center bg-foreground px-8 text-center transition hover:opacity-90">
             <span className="font-mono text-[9px] tracking-widest text-background/40 uppercase">[ System ]</span>
             <p className="mt-2 text-2xl font-bold tracking-tight text-background sm:text-3xl">
-              KEOS &amp; K-Tern.ai<br/>Design System
+              KEOS &amp; K-Tern<br/>Design System
             </p>
             <span className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-background/20 px-4 py-1.5 font-mono text-[10px] tracking-widest text-background/60 uppercase transition group-hover:border-background/50 group-hover:text-background/90">
               Explore Studio →
@@ -293,13 +293,13 @@ export default function Home() {
             Meet our team
           </h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            The people behind KEOS &amp; K-Tern.ai — designers, engineers, and thinkers building the future of enterprise AI products at Kaartech.
+            The people behind KEOS &amp; K-Tern — designers, engineers, and thinkers building the future of enterprise AI products at Kaartech.
           </p>
           <div className="mt-10 w-full overflow-hidden rounded-2xl border">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/team.jpg"
-              alt="The KEOS & K-Tern.ai team"
+              alt="The KEOS & K-Tern team"
               className="w-full object-cover object-center transition-all duration-700 grayscale hover:grayscale-0"
               style={{ maxHeight: "520px", display: "block" }}
             />
@@ -384,7 +384,7 @@ export default function Home() {
         >
           Aswini
         </a>
-        {" "}Â· KEOS &amp; K-Tern.ai
+        {" "}Â· KEOS &amp; K-Tern
       </footer>
       </div>
     </div>
