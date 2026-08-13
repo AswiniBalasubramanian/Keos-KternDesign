@@ -391,11 +391,11 @@ export default function Home() {
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-[#333]">
-              Every product decision carries a feeling. When we started building KEOS & KTern, we saw enterprise software full of friction, inconsistency, and invisible walls. We believed there had to be a better way — one built on genuine craft and human understanding.
+              Every product decision carries a feeling. When we started building KEOS & KTern, we saw enterprise software full of friction, inconsistency, and invisible walls. We believed there had to be a better way, one built on genuine craft and human understanding.
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-[#333]">
-              A design system, to us, isn&apos;t just a library of components. It&apos;s the heartbeat of everything we ship — it&apos;s in every token we name, every interaction state we consider, and every decision we make together as a team.
+              A design system, to us, isn&apos;t just a library of components. It&apos;s the heartbeat of everything we ship, in every token we name, every interaction state we consider, and every decision we make together as a team.
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-[#333]">
@@ -403,14 +403,15 @@ export default function Home() {
             </p>
 
             <p className="mt-5 text-sm leading-relaxed text-[#333]">
-              Here&apos;s to building products where design isn&apos;t just seen — it is felt.
+              Here&apos;s to building products where design isn&apos;t just seen. It is felt.
             </p>
 
             <div className="mt-6 flex items-end justify-between">
               <p className="text-sm text-[#555]">Warmly,</p>
               <div className="text-right">
-                <p style={{ fontFamily: "var(--font-figtree), sans-serif", color: "#1a3a6b" }} className="text-base font-semibold italic">Aswini B</p>
-                <p className="font-sans text-[11px] text-[#777]">Design Lead, KEOS & KTern</p>
+                <p style={{ fontFamily: "'Mayonice', cursive", fontSize: "28px", lineHeight: 1, color: "#1a3a6b", letterSpacing: "0.01em" }}>Aswini B</p>
+                <p style={{ fontFamily: "var(--font-figtree), sans-serif", color: "#1a3a6b" }} className="mt-1 text-[12px] font-semibold">Aswini B</p>
+                <p className="text-[11px] text-[#777]">Design Lead, KEOS & KTern</p>
               </div>
             </div>
           </div>

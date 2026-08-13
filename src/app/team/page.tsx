@@ -1,7 +1,7 @@
 ﻿import { SiteNav } from "@/components/site/site-nav"
 
 const members = [
-  { name: "Edson", role: "Head of KTern", dept: "Product" },
+  { name: "Edson", role: "Head of KTern, KEOS", dept: "Product" },
   { name: "Aswini B", role: "Design Lead", dept: "Design" },
   { name: "Vijayaraghavan", role: "Lead Engineer", dept: "Engineering" },
   { name: "Team Member", role: "Frontend Engineer", dept: "Engineering" },
