@@ -211,7 +211,18 @@ export default function Home() {
           </Link>
 
           {/* Banner — 2 cols */}
-          <Link href="/studio" className="group col-span-2 flex flex-col items-center justify-center bg-foreground px-8 text-center transition hover:opacity-90">
+          <Link
+            href="/studio"
+            className="group col-span-2 flex flex-col items-center justify-center px-8 text-center transition hover:opacity-90"
+            style={{
+              backgroundColor: "#0a0a0a",
+              backgroundImage: [
+                "radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px)",
+              ].join(", "),
+              backgroundSize: "4px 4px",
+              backgroundPosition: "0 0",
+            }}
+          >
             <span className="font-mono text-[9px] tracking-widest text-background/40 uppercase">[ System ]</span>
             <p className="mt-2 text-2xl font-bold tracking-tight text-background sm:text-3xl">
               KEOS &amp; KTern<br/>Design System
