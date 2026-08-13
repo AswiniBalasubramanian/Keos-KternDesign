@@ -411,7 +411,6 @@ export default function Home() {
               <div className="text-right">
                 <p style={{ fontFamily: "'Mayonice', cursive", fontSize: "28px", lineHeight: 1, color: "#1a3a6b", letterSpacing: "0.01em" }}>Aswini B</p>
                 <p style={{ fontFamily: "var(--font-figtree), sans-serif", color: "#1a3a6b" }} className="mt-1 text-[12px] font-semibold">Aswini B</p>
-                <p className="text-[11px] text-[#777]">Design Lead, KEOS & KTern</p>
               </div>
             </div>
           </div>
