@@ -409,7 +409,7 @@ export default function Home() {
             <div className="mt-6 flex items-end justify-between">
               <p className="text-sm text-[#555]">Warmly,</p>
               <div className="text-right">
-                <p style={{ fontFamily: "'Mayonice', cursive", fontSize: "28px", lineHeight: 1, color: "#1a3a6b", letterSpacing: "0.01em" }}>Aswini B</p>
+                <p style={{ fontFamily: "'AmericanSignature', cursive", fontSize: "38px", lineHeight: 1, color: "#1a3a6b", letterSpacing: "0.01em" }}>Aswini B</p>
                 <p style={{ fontFamily: "var(--font-figtree), sans-serif", color: "#1a3a6b" }} className="mt-1 text-[12px] font-semibold">Aswini B</p>
               </div>
             </div>
