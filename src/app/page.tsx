@@ -361,7 +361,7 @@ export default function Home() {
         className="relative border-t overflow-hidden"
         style={{
           minHeight: "520px",
-          backgroundImage: "url('/desert-bg.png')",
+          backgroundImage: "url('/ocean-bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
