@@ -361,14 +361,9 @@ export default function Home() {
         className="relative border-t overflow-hidden"
         style={{
           minHeight: "520px",
-          /* Desert landscape base gradient */
-          background: "linear-gradient(to bottom, #6e8fa3 0%, #a87b5a 28%, #c95c2a 48%, #e8640f 62%, #f5820a 76%, #f5a623 90%, #e8c04a 100%)",
-          /* Halftone dot screen overlay */
-          backgroundImage: [
-            "radial-gradient(circle, rgba(0,0,0,0.28) 1.2px, transparent 1.2px)",
-            "linear-gradient(to bottom, #6e8fa3 0%, #a87b5a 28%, #c95c2a 48%, #e8640f 62%, #f5820a 76%, #f5a623 90%, #e8c04a 100%)",
-          ].join(", "),
-          backgroundSize: "5px 5px, 100% 100%",
+          backgroundImage: "url('/desert-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
 
