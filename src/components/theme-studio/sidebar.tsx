@@ -64,7 +64,7 @@ export function StudioSidebar() {
     >
       <div className="flex h-full w-72 flex-col gap-3 overflow-y-auto p-4">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium">Keos design system</span>
+        <span className="text-sm font-medium">Kanvas Design</span>
         <SidebarTrigger className="text-zinc-100 hover:bg-zinc-800 hover:text-zinc-100" />
       </div>
 
