@@ -60,7 +60,7 @@ export function StudioSidebar() {
     <>
       {/* Floating expand button — visible only when sidebar is collapsed */}
       {!open && (
-        <div className="fixed left-4 top-1/2 z-50 -translate-y-1/2">
+        <div className="fixed left-4 top-20 z-50">
           <SidebarTrigger className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700 bg-zinc-900 text-zinc-100 shadow-lg hover:bg-zinc-800 hover:text-zinc-100 transition-all" />
         </div>
       )}
