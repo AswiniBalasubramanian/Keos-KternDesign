@@ -57,6 +57,13 @@ export function StudioSidebar() {
   const { open } = useSidebar()
 
   return (
+    <>
+      {/* Floating expand button — visible only when sidebar is collapsed */}
+      {!open && (
+        <div className="fixed left-4 top-1/2 z-50 -translate-y-1/2">
+          <SidebarTrigger className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700 bg-zinc-900 text-zinc-100 shadow-lg hover:bg-zinc-800 hover:text-zinc-100 transition-all" />
+        </div>
+      )}
     <aside
       className={`h-full shrink-0 overflow-hidden border-r bg-zinc-950 text-zinc-100 transition-[width] duration-200 ease-linear ${
         open ? "w-72" : "w-0 border-r-0"
@@ -168,6 +175,7 @@ export function StudioSidebar() {
 
       </div>
     </aside>
+    </>
   )
 }
 
