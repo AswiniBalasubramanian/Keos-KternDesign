@@ -16,10 +16,8 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-50 grid h-16 w-full grid-cols-[auto_1fr_auto] items-center gap-4 border-b bg-background/95 px-8 backdrop-blur supports-backdrop-filter:bg-background/80 sm:px-10">
       <Link href="/" className="flex shrink-0 items-center gap-2">
-        <KMark className="h-7 w-7 text-foreground" />
-        <span className="text-muted-foreground/60 text-base font-light">+</span>
         <KanvasMark className="h-6 w-6 text-foreground" />
-        <span className="text-sm font-semibold tracking-tight whitespace-nowrap">Kanvas Design System</span>
+        <span className="text-sm font-semibold tracking-tight whitespace-nowrap">Kanvas Design</span>
       </Link>
 
       <nav className="flex items-center justify-center gap-5 font-mono text-xs tracking-widest whitespace-nowrap text-muted-foreground uppercase">

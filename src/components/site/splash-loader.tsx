@@ -89,36 +89,13 @@ export function SplashLoader() {
         className="absolute inset-0 flex flex-col items-center justify-center"
         style={{ zIndex: 2 }}
       >
-        {/* Logos */}
-        <div className="flex items-center gap-6">
-          {/* KMark */}
-          <div style={{
-            opacity:    visible ? 1 : 0,
-            transform:  visible ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s, transform 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s",
-          }}>
-            <KMark className="h-14 w-14 text-white" />
-          </div>
-
-          {/* Separator */}
-          <div style={{
-            width: "1px",
-            height: "32px",
-            background: "rgba(255,255,255,0.12)",
-            opacity:    visible ? 1 : 0,
-            transform:  visible ? "scaleY(1)" : "scaleY(0)",
-            transformOrigin: "top",
-            transition: "opacity 0.4s ease 0.35s, transform 0.5s cubic-bezier(0.16,1,0.3,1) 0.35s",
-          }} />
-
-          {/* KternMark */}
-          <div style={{
-            opacity:    visible ? 1 : 0,
-            transform:  visible ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 0.7s cubic-bezier(0.16,1,0.3,1) 0.2s, transform 0.7s cubic-bezier(0.16,1,0.3,1) 0.2s",
-          }}>
-            <KanvasMark className="h-12 w-12 text-white" />
-          </div>
+        {/* Logo */}
+        <div style={{
+          opacity:    visible ? 1 : 0,
+          transform:  visible ? "translateY(0)" : "translateY(20px)",
+          transition: "opacity 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s, transform 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s",
+        }}>
+          <KanvasMark className="h-16 w-16 text-white" />
         </div>
 
         {/* Wordmark — clip-path reveal */}
