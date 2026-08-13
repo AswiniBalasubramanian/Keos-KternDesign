@@ -372,7 +372,7 @@ export default function Home() {
           <div
             className="w-full max-w-lg rounded-sm px-10 py-14 shadow-2xl"
             style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontFamily: "var(--font-figtree), sans-serif",
               backgroundColor: "#edeae5",
               backgroundImage: [
                 "repeating-linear-gradient(0deg,  rgba(255,255,255,0.55) 0px, rgba(255,255,255,0.55) 1px, transparent 1px, transparent 4px)",
@@ -382,7 +382,7 @@ export default function Home() {
               ].join(", "),
             }}
           >
-            <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#1a1a2e]">
+            <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#1a1a2e]" style={{ fontFamily: "var(--font-eb-garamond), serif" }}>
               A letter from<br />the designer
             </h2>
 
