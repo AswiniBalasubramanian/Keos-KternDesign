@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import { KMark } from "@/components/site/k-mark"
-import { KternMark } from "@/components/site/ktern-mark"
+import { KanvasMark } from "@/components/site/kanvas-mark"
 
 type Phase = "blank" | "reveal" | "hold" | "exit" | "done"
 
@@ -117,7 +117,7 @@ export function SplashLoader() {
             transform:  visible ? "translateY(0)" : "translateY(20px)",
             transition: "opacity 0.7s cubic-bezier(0.16,1,0.3,1) 0.2s, transform 0.7s cubic-bezier(0.16,1,0.3,1) 0.2s",
           }}>
-            <KternMark className="h-12 w-12 text-white" />
+            <KanvasMark className="h-12 w-12 text-white" />
           </div>
         </div>
 

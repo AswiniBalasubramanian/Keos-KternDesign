@@ -6,7 +6,7 @@ import { Search, Mail, ChevronDown, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { KMark } from "@/components/site/k-mark"
-import { KternMark } from "@/components/site/ktern-mark"
+import { KanvasMark } from "@/components/site/kanvas-mark"
 import { ThemeToggle } from "@/components/site/theme-toggle"
 import { siteNavLinks } from "@/lib/site-nav-data"
 
@@ -18,8 +18,8 @@ export function SiteNav() {
       <Link href="/" className="flex shrink-0 items-center gap-2">
         <KMark className="h-7 w-7 text-foreground" />
         <span className="text-muted-foreground/60 text-base font-light">+</span>
-        <KternMark className="h-6 w-6 text-foreground" />
-        <span className="text-sm font-semibold tracking-tight whitespace-nowrap">Keos &amp; KTern Design</span>
+        <KanvasMark className="h-6 w-6 text-foreground" />
+        <span className="text-sm font-semibold tracking-tight whitespace-nowrap">Kanvas Design System</span>
       </Link>
 
       <nav className="flex items-center justify-center gap-5 font-mono text-xs tracking-widest whitespace-nowrap text-muted-foreground uppercase">
