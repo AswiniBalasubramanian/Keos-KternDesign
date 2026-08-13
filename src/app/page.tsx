@@ -357,23 +357,36 @@ export default function Home() {
       </section>
 
       {/* ── Letter from the designer ──────────────────────────────────────── */}
-      <section className="relative border-t overflow-hidden" style={{ minHeight: "520px" }}>
-        {/* Split painted background using team photo */}
-        <div className="absolute inset-0 flex pointer-events-none" aria-hidden="true">
-          <div className="w-[32%] overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/team.jpg" alt="" className="h-full w-full object-cover object-left" style={{ filter: "saturate(1.7) contrast(1.1) brightness(0.75)" }} />
-          </div>
-          <div className="flex-1 bg-background" />
-          <div className="w-[32%] overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/team.jpg" alt="" className="h-full w-full object-cover object-right" style={{ filter: "saturate(1.7) contrast(1.1) brightness(0.75)" }} />
-          </div>
-        </div>
+      <section
+        className="relative border-t overflow-hidden"
+        style={{
+          minHeight: "520px",
+          /* Desert landscape base gradient */
+          background: "linear-gradient(to bottom, #6e8fa3 0%, #a87b5a 28%, #c95c2a 48%, #e8640f 62%, #f5820a 76%, #f5a623 90%, #e8c04a 100%)",
+          /* Halftone dot screen overlay */
+          backgroundImage: [
+            "radial-gradient(circle, rgba(0,0,0,0.28) 1.2px, transparent 1.2px)",
+            "linear-gradient(to bottom, #6e8fa3 0%, #a87b5a 28%, #c95c2a 48%, #e8640f 62%, #f5820a 76%, #f5a623 90%, #e8c04a 100%)",
+          ].join(", "),
+          backgroundSize: "5px 5px, 100% 100%",
+        }}
+      >
 
         {/* Letter card */}
         <div className="relative z-10 flex justify-center px-6 py-16 sm:px-10">
-          <div className="w-full max-w-lg rounded-sm bg-white px-10 py-14 shadow-2xl" style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}>
+          <div
+            className="w-full max-w-lg rounded-sm px-10 py-14 shadow-2xl"
+            style={{
+              fontFamily: "Georgia, 'Times New Roman', serif",
+              backgroundColor: "#edeae5",
+              backgroundImage: [
+                "repeating-linear-gradient(0deg,  rgba(255,255,255,0.55) 0px, rgba(255,255,255,0.55) 1px, transparent 1px, transparent 4px)",
+                "repeating-linear-gradient(90deg, rgba(255,255,255,0.55) 0px, rgba(255,255,255,0.55) 1px, transparent 1px, transparent 4px)",
+                "repeating-linear-gradient(0deg,  rgba(0,0,0,0.045)      0px, rgba(0,0,0,0.045)      1px, transparent 1px, transparent 4px)",
+                "repeating-linear-gradient(90deg, rgba(0,0,0,0.045)      0px, rgba(0,0,0,0.045)      1px, transparent 1px, transparent 4px)",
+              ].join(", "),
+            }}
+          >
             <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#1a1a2e]">
               A letter from<br />the designer
             </h2>
@@ -400,11 +413,9 @@ export default function Home() {
 
             <p className="mt-6 text-sm text-[#555]">Warmly,</p>
 
-            <div className="mt-4 flex items-end gap-8">
-              <div className="text-center">
-                <p className="font-sans text-[13px] font-semibold text-[#1a1a2e]">Aswini B</p>
-                <p className="font-sans text-[11px] text-[#777]">Design Lead, KEOS & K-Tern</p>
-              </div>
+            <div className="mt-4">
+              <p className="font-sans text-[13px] font-semibold text-[#1a1a2e]">Aswini B</p>
+              <p className="font-sans text-[11px] text-[#777]">Design Lead, KEOS & K-Tern</p>
             </div>
           </div>
         </div>
