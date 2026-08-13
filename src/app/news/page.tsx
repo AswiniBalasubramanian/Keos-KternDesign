@@ -12,7 +12,7 @@ const releases = [
     tagColor: "bg-[#FB540C]/10 text-[#FB540C]",
     title: "Keos v0.1 — First internal release for Kaartech",
     summary:
-      "The first internal milestone of the Keos & K-Tern Design System, shipped to the Kaartech team. Includes foundation tokens, core components, and the Studio theme switcher.",
+      "The first internal milestone of the Keos & KTern Design System, shipped to the Kaartech team. Includes foundation tokens, core components, and the Studio theme switcher.",
     date: "Aug 10, 2026",
     audience: "Kaartech internal",
   },
@@ -28,7 +28,7 @@ export default function NewsPage() {
         <p className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">[ Releases ]</p>
         <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">News &amp; Releases</h1>
         <p className="mt-3 max-w-xl text-sm text-muted-foreground">
-          Official announcements and release notes from the KEOS &amp; K-Tern Design System team.
+          Official announcements and release notes from the KEOS &amp; KTern Design System team.
         </p>
       </section>
 

@@ -10,8 +10,8 @@ import { Check, Copy, Download } from "lucide-react"
 const brandColors = [
   { name: "Keos Orange",    hex: "#F97316", var: "--color-keos-orange",  group: "Primary" },
   { name: "Keos Dark",      hex: "#0D0D0D", var: "--color-keos-dark",    group: "Primary" },
-  { name: "K-Tern Cyan",    hex: "#06B6D4", var: "--color-ktern-cyan",   group: "Secondary" },
-  { name: "K-Tern Violet",  hex: "#8B5CF6", var: "--color-ktern-violet", group: "Secondary" },
+  { name: "KTern Cyan",    hex: "#06B6D4", var: "--color-ktern-cyan",   group: "Secondary" },
+  { name: "KTern Violet",  hex: "#8B5CF6", var: "--color-ktern-violet", group: "Secondary" },
   { name: "Surface",        hex: "#FAFAFA", var: "--background",          group: "Neutral" },
   { name: "Border",         hex: "#E5E7EB", var: "--border",              group: "Neutral" },
   { name: "Muted Text",     hex: "#6B7280", var: "--muted-foreground",    group: "Neutral" },
@@ -83,7 +83,7 @@ export default function BrandingKitPage() {
         <p className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">[ Brand ]</p>
         <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">Branding Kit</h1>
         <p className="mt-3 max-w-xl text-sm text-muted-foreground">
-          Official logos, colors, typography, and usage guidelines for KEOS &amp; K-Tern.
+          Official logos, colors, typography, and usage guidelines for KEOS &amp; KTern.
           Everything you need to represent the brand consistently.
         </p>
         <a
@@ -121,14 +121,14 @@ export default function BrandingKitPage() {
           <div className="space-y-12">
             <div>
               <h2 className="text-lg font-semibold tracking-tight">Logo Marks</h2>
-              <p className="mt-1 text-sm text-muted-foreground">Primary marks for KEOS and K-Tern.</p>
+              <p className="mt-1 text-sm text-muted-foreground">Primary marks for KEOS and KTern.</p>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 { bg: "bg-background", border: true,  label: "KMark · Light",  mark: <KMark className="h-12 w-12 text-foreground" /> },
                 { bg: "bg-foreground", border: false,  label: "KMark · Dark",   mark: <KMark className="h-12 w-12 text-background" /> },
-                { bg: "bg-background", border: true,  label: "K-Tern · Light", mark: <KternMark className="h-12 w-12 text-foreground" /> },
-                { bg: "bg-foreground", border: false,  label: "K-Tern · Dark",  mark: <KternMark className="h-12 w-12 text-background" /> },
+                { bg: "bg-background", border: true,  label: "KTern · Light", mark: <KternMark className="h-12 w-12 text-foreground" /> },
+                { bg: "bg-foreground", border: false,  label: "KTern · Dark",  mark: <KternMark className="h-12 w-12 text-background" /> },
               ].map((v, i) => (
                 <div key={i} className={`overflow-hidden rounded-xl ${v.border ? "border" : ""}`}>
                   <div className={`flex h-36 items-center justify-center ${v.bg}`}>
@@ -149,7 +149,7 @@ export default function BrandingKitPage() {
                 <KMark className="h-10 w-10 text-foreground" />
                 <span className="text-xl font-light text-muted-foreground/50">+</span>
                 <KternMark className="h-9 w-9 text-foreground" />
-                <span className="text-base font-semibold tracking-tight">Keos &amp; K-Tern Design</span>
+                <span className="text-base font-semibold tracking-tight">Keos &amp; KTern Design</span>
               </div>
             </div>
           </div>

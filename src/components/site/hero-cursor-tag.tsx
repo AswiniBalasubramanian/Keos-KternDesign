@@ -138,8 +138,8 @@ export function HeroCursorTag() {
       {/* Aswini â€” upper-left; triangle tip points down-right toward "Design decisions" */}
       <CollabCursor label="Aswini" color="#FB540C" dir="dr" posStyle={{ left: "10%", top: "14%" }} />
 
-      {/* K-Tern â€” lower-left; triangle tip points up-right toward title */}
-      <CollabCursor label="K-Tern" color="#DC143C" dir="ur" posStyle={{ left: "12%", top: "68%" }} />
+      {/* KTern â€” lower-left; triangle tip points up-right toward title */}
+      <CollabCursor label="KTern" color="#DC143C" dir="ur" posStyle={{ left: "12%", top: "68%" }} />
 
       {/* You â€” follows mouse; tip points down-right from pill */}
       <CollabCursor

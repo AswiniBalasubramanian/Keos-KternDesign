@@ -29,11 +29,11 @@ const copySnippets = [
   },
   {
     label: "One-liner",
-    text: "KEOS & K-Tern is the visual and experience layer unifying all our products â€” color, type, motion, and interaction, themeable in real time.",
+    text: "KEOS & KTern is the visual and experience layer unifying all our products â€” color, type, motion, and interaction, themeable in real time.",
   },
   {
     label: "Mission",
-    text: "We believe great design should never be rebuilt from scratch. KEOS & K-Tern gives every team a shared language that ships faster and stays consistent.",
+    text: "We believe great design should never be rebuilt from scratch. KEOS & KTern gives every team a shared language that ships faster and stays consistent.",
   },
   {
     label: "Tweet-size",
@@ -79,7 +79,7 @@ export default function MarketingKitPage() {
         <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">Marketing Kit</h1>
         <p className="mt-3 max-w-xl text-sm text-muted-foreground">
           Ready-to-use templates for social media, presentations, email campaigns, and
-          copy â€” all on-brand for KEOS &amp; K-Tern.
+          copy â€” all on-brand for KEOS &amp; KTern.
         </p>
         <a
           href="#"

@@ -5,7 +5,7 @@ export default function AccessibilityPage() {
     <ComingSoon
       label="Accessibility"
       title="Accessibility"
-      description="WCAG guidelines, keyboard navigation patterns, ARIA token standards, and inclusive design documentation for KEOS & K-Tern."
+      description="WCAG guidelines, keyboard navigation patterns, ARIA token standards, and inclusive design documentation for KEOS & KTern."
       backHref="/foundation"
       backLabel="Back to Foundation"
     />

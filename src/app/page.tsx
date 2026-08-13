@@ -109,7 +109,7 @@ export default function Home() {
                 Keos v0.1 — First internal release
               </h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
-                The first internal milestone of the Keos &amp; K-Tern Design System, shipped to the Kaartech team. Includes foundation tokens, core components, and the Studio theme switcher.
+                The first internal milestone of the Keos &amp; KTern Design System, shipped to the Kaartech team. Includes foundation tokens, core components, and the Studio theme switcher.
               </p>
             </div>
 
@@ -214,7 +214,7 @@ export default function Home() {
           <Link href="/studio" className="group col-span-2 flex flex-col items-center justify-center bg-foreground px-8 text-center transition hover:opacity-90">
             <span className="font-mono text-[9px] tracking-widest text-background/40 uppercase">[ System ]</span>
             <p className="mt-2 text-2xl font-bold tracking-tight text-background sm:text-3xl">
-              KEOS &amp; K-Tern<br/>Design System
+              KEOS &amp; KTern<br/>Design System
             </p>
             <span className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-background/20 px-4 py-1.5 font-mono text-[10px] tracking-widest text-background/60 uppercase transition group-hover:border-background/50 group-hover:text-background/90">
               Explore Studio →
@@ -293,13 +293,13 @@ export default function Home() {
             Meet our team
           </h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            The people behind KEOS &amp; K-Tern — designers, engineers, and thinkers building the future of enterprise AI products at Kaartech.
+            The people behind KEOS &amp; KTern — designers, engineers, and thinkers building the future of enterprise AI products at Kaartech.
           </p>
           <div className="mt-10 w-full overflow-hidden rounded-2xl border">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/team.jpg"
-              alt="The KEOS & K-Tern team"
+              alt="The KEOS & KTern team"
               className="w-full object-cover object-center transition-all duration-700 grayscale hover:grayscale-0"
               style={{ maxHeight: "520px", display: "block" }}
             />
@@ -391,7 +391,7 @@ export default function Home() {
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-[#333]">
-              Every product decision carries a feeling. When we started building KEOS & K-Tern, we saw enterprise software full of friction, inconsistency, and invisible walls. We believed there had to be a better way — one built on genuine craft and human understanding.
+              Every product decision carries a feeling. When we started building KEOS & KTern, we saw enterprise software full of friction, inconsistency, and invisible walls. We believed there had to be a better way — one built on genuine craft and human understanding.
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-[#333]">
@@ -410,7 +410,7 @@ export default function Home() {
 
             <div className="mt-4">
               <p className="font-sans text-[13px] font-semibold text-[#1a1a2e]">Aswini B</p>
-              <p className="font-sans text-[11px] text-[#777]">Design Lead, KEOS & K-Tern</p>
+              <p className="font-sans text-[11px] text-[#777]">Design Lead, KEOS & KTern</p>
             </div>
           </div>
         </div>
@@ -444,7 +444,7 @@ export default function Home() {
         >
           Aswini
         </a>
-        {" "}· KEOS &amp; K-Tern
+        {" "}· KEOS &amp; KTern
       </footer>
       </div>
     </div>

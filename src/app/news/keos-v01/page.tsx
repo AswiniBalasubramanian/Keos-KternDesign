@@ -4,7 +4,7 @@ import { SiteNav } from "@/components/site/site-nav"
 
 export const metadata = {
   title: "Keos v0.1 — First internal release",
-  description: "The first internal milestone of the Keos & K-Tern Design System, shipped to the Kaartech team.",
+  description: "The first internal milestone of the Keos & KTern Design System, shipped to the Kaartech team.",
 }
 
 export default function KeosV01Page() {
@@ -268,7 +268,7 @@ export default function KeosV01Page() {
 
         {/* ── Footer ─────────────────────────────────────────────────────── */}
         <footer className="border-t px-6 py-8 font-mono text-[11px] tracking-widest text-muted-foreground uppercase sm:px-10">
-          Keos &amp; K-Tern Design System · Kaartech © 2026 ·{" "}
+          Keos &amp; KTern Design System · Kaartech © 2026 ·{" "}
           <Link href="/news" className="text-foreground hover:underline">All releases</Link>
         </footer>
 

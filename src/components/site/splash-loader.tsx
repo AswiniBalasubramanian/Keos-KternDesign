@@ -135,7 +135,7 @@ export function SplashLoader() {
               textTransform: "uppercase",
               textAlign: "center",
             }}>
-              Keos &amp; K-Tern Design System
+              Keos &amp; KTern Design System
             </p>
           </div>
         </div>

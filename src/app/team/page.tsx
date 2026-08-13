@@ -1,7 +1,7 @@
 ﻿import { SiteNav } from "@/components/site/site-nav"
 
 const members = [
-  { name: "Edson", role: "Head of K-Tern", dept: "Product" },
+  { name: "Edson", role: "Head of KTern", dept: "Product" },
   { name: "Aswini B", role: "Design Lead", dept: "Design" },
   { name: "Vijayaraghavan", role: "Lead Engineer", dept: "Engineering" },
   { name: "Team Member", role: "Frontend Engineer", dept: "Engineering" },
@@ -35,7 +35,7 @@ export default function TeamPage() {
             <span className="text-muted-foreground">of enterprise design.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            KEOS &amp; K-Tern is the design system powering AI-native enterprise products at Kaartech.
+            KEOS &amp; KTern is the design system powering AI-native enterprise products at Kaartech.
             Our team of designers, engineers, and researchers work together to build tools that help millions of users work smarter.
           </p>
         </div>
@@ -48,13 +48,13 @@ export default function TeamPage() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/team.jpg"
-              alt="The KEOS & K-Tern team"
+              alt="The KEOS & KTern team"
               className="w-full object-cover object-center transition-all duration-700 grayscale hover:grayscale-0"
               style={{ maxHeight: "600px", display: "block" }}
             />
           </div>
           <p className="mt-4 text-center font-mono text-xs tracking-widest text-muted-foreground/60 uppercase">
-            The KEOS &amp; K-Tern team — Kaartech, 2026
+            The KEOS &amp; KTern team — Kaartech, 2026
           </p>
         </div>
       </section>
@@ -154,7 +154,7 @@ export default function TeamPage() {
         >
           Aswini
         </a>
-        {" "}· KEOS &amp; K-Tern
+        {" "}· KEOS &amp; KTern
       </footer>
     </div>
   )

@@ -28,7 +28,7 @@ type PeerCard = {
 const initialProductCards: ProductCard[] = [
   {
     name: "Edson",
-    role: "Head of K-Tern",
+    role: "Head of KTern",
     message: "The design system has transformed how our team ships — consistent, beautiful, and fast.",
     emoji: "🚀",
     source: "team",
@@ -43,7 +43,7 @@ const initialProductCards: ProductCard[] = [
   {
     name: "Kaartech Team",
     role: "Internal",
-    message: "KEOS & K-Tern is the backbone of everything we build. Proud to ship with it.",
+    message: "KEOS & KTern is the backbone of everything we build. Proud to ship with it.",
     emoji: "💙",
     source: "external",
   },
@@ -52,7 +52,7 @@ const initialProductCards: ProductCard[] = [
 const initialPeerCards: PeerCard[] = [
   {
     from: "Edson",
-    fromRole: "Head of K-Tern",
+    fromRole: "Head of KTern",
     to: "Aswini B",
     toRole: "Design Lead",
     message: "Aswini's attention to detail and design thinking elevated every component. Truly exceptional work.",
@@ -225,7 +225,7 @@ function SubmitForm({
         <label className="text-xs font-medium">
           {type === "product" ? "Your feedback" : "Your message"}
         </label>
-        <textarea name="message" required rows={4} placeholder={type === "product" ? "Tell us what KEOS & K-Tern means to you…" : "Write something kind…"} className="w-full rounded-lg border bg-background px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-foreground/20 resize-none" />
+        <textarea name="message" required rows={4} placeholder={type === "product" ? "Tell us what KEOS & KTern means to you…" : "Write something kind…"} className="w-full rounded-lg border bg-background px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-foreground/20 resize-none" />
       </div>
 
       {error && <p className="text-xs text-destructive">{error}</p>}
@@ -325,7 +325,7 @@ export default function AppreciationPage() {
         <a href="https://www.linkedin.com/in/iam-aswini" target="_blank" rel="noopener noreferrer" className="text-foreground hover:underline">
           Aswini
         </a>
-        {" "}· KEOS & K-Tern
+        {" "}· KEOS & KTern
       </footer>
     </div>
   )
