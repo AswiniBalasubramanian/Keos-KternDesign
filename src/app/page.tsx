@@ -409,7 +409,7 @@ export default function Home() {
             <p className="mt-6 text-sm text-[#555]">Warmly,</p>
 
             <div className="mt-4">
-              <p className="font-sans text-[13px] font-semibold text-[#1a1a2e]">Aswini B</p>
+              <p style={{ fontFamily: "'Mayonice', cursive", fontSize: "22px", lineHeight: 1.1 }} className="text-[#1a1a2e]">Aswini B</p>
               <p className="font-sans text-[11px] text-[#777]">Design Lead, KEOS & KTern</p>
             </div>
           </div>
