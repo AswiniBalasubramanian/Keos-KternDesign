@@ -406,11 +406,12 @@ export default function Home() {
               Here&apos;s to building products where design isn&apos;t just seen — it is felt.
             </p>
 
-            <p className="mt-6 text-sm text-[#555]">Warmly,</p>
-
-            <div className="mt-4">
-              <p style={{ fontFamily: "'Mayonice', cursive", fontSize: "22px", lineHeight: 1.1 }} className="text-[#1a1a2e]">Aswini B</p>
-              <p className="font-sans text-[11px] text-[#777]">Design Lead, KEOS & KTern</p>
+            <div className="mt-6 flex items-end justify-between">
+              <p className="text-sm text-[#555]">Warmly,</p>
+              <div className="text-right">
+                <p style={{ fontFamily: "var(--font-figtree), sans-serif", color: "#1a3a6b" }} className="text-base font-semibold italic">Aswini B</p>
+                <p className="font-sans text-[11px] text-[#777]">Design Lead, KEOS & KTern</p>
+              </div>
             </div>
           </div>
         </div>
